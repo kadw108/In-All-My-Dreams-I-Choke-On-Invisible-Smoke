@@ -1,0 +1,19 @@
+/* FOR CUSTOM FONTS */
+/* Add in font variations as you need them for italic/bold/etc - see https://www.metaltoad.com/blog/how-use-font-face-avoid-faux-italic-and-bold-browser-styles */
+/* Or just settle for faux-italic, faux-bold */
+
+@font-face {
+  	font-family: "MonoFont";
+  	src: url("assets/Fira_Mono/FiraMono-Regular.ttf");
+  	font-weight: normal;
+}
+@font-face {
+ 	font-family: "MonoFont";
+  	src: url("assets/Fira_Mono/FiraMono-Bold.ttf");
+  	font-weight: bold;
+}
+
+@font-face {
+ 	font-family: "Display1";
+  	src: url("assets/Display_Font/VT323-Regular.ttf");
+}

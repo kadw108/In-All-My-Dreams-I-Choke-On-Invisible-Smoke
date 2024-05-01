@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "dom-chef": "^5.1.1",
+    "iffinity": "^0.4.0"
+  },
+  "type": "module"
+}
