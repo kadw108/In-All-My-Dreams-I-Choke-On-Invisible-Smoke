@@ -1,0 +1,17 @@
+.gameBg > * {
+    position: absolute;
+}
+
+.arrow, .npc {
+    cursor: pointer;
+}
+
+.arrow {
+    width: 4%;    
+}
+
+.closeButton {
+    float: right;
+    margin-right: 10px;
+    margin-top: 5px;
+  }

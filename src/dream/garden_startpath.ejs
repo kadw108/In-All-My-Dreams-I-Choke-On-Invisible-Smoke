@@ -1,10 +1,15 @@
 <snippet name="garden_startpath">
 
-<div class="absoluteAlign bothHalves" style="background-image: url('assets/garden_startpath.gif'); background-size: cover">
-    <img src="assets/arrow.gif" alt="arrow" style="transform: rotate(90deg);">
+<div class="absoluteAlign bothHalves gameBg" style="background-image: url('assets/garden_startpath.gif'); background-size: cover">
 </div>
 <div class="absoluteAlign bottomHalf blackBg">
     <p>Beyond the glass walls, clockwork machines click and hum. Bronze gears tick in their gearshafts. On the ceiling, liquid rushes through glass pipes, occasionally leaking onto the floor where the pipes have cracked.</p>
 </div>
+
+<% 
+$(function () {
+    window.mainScript.addArrow("up", 2, 35, "garden_startpath2");
+});
+%>
 
 </snippet>

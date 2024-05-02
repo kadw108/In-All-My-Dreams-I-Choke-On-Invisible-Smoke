@@ -108,6 +108,8 @@ div .bottomHalf {
   border-image-slice: 8;
   border-width: 7px;
   border-image-repeat: repeat;
+
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 /*

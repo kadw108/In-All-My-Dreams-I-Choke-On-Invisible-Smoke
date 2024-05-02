@@ -9,7 +9,7 @@
     "scripts": {
         "story": [
             "meta/typeScriptMain.js",
-            "meta/storyScript.js"
+            "meta/initialScript.js"
         ],
         "global": [
             "meta/globalScript.js"
@@ -19,7 +19,8 @@
         "story": [
             "meta/styles/reset.css",
             "meta/styles/stylesheet.css",
-            "meta/styles/fonts.css"
+            "meta/styles/fonts.css",
+            "meta/styles/specific.css"
         ]
     },
     "validation": {
