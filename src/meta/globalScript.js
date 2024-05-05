@@ -1,7 +1,7 @@
 $(function () {
-    window.mainScript.addWrapperHtml();
-    window.mainScript.addReplaceLink();
-    window.mainScript.addMenuPanels();
+    mainScript.addWrapperHtml();
+    mainScript.addReplaceLink();
+    mainScript.addMenuPanels();
 
     const bottomHalf = document.querySelector("div.absoluteAlign.bottomHalf");
     if (story.transitionMessage !== null) {

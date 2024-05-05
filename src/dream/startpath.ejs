@@ -1,0 +1,118 @@
+<snippet tags="dream" name="garden_startpath">
+<div class="absoluteAlign bothHalves gameBg" style="background-image: url('assets/9_path1.png.gif'); background-size: cover">
+</div>
+
+<% 
+$(function () {
+    mainScript.addArrow("up", "garden_startpath2", 59, 41);
+});
+%>
+</snippet>
+
+<snippet tags="dream" name="garden_startpath2">
+<div class="absoluteAlign bothHalves gameBg" style="background-image: url('assets/9_path2.png.gif'); background-size: cover">
+</div>
+
+<% 
+$(function () {
+    mainScript.addArrow("up", "garden_startpath3", 59, 42);
+    mainScript.addArrow("down", "garden_startpath");
+
+    mainScript.addNpc("assets/d_lily.gif", 20, 65, 30, "Lily", mainScript.dialogue.mournDialogue);
+});
+%>
+</snippet>
+
+<snippet tags="dream" name="garden_startpath3">
+<div class="absoluteAlign bothHalves gameBg" style="background-image: url('assets/9_path3.png.gif'); background-size: cover">
+</div>
+
+<% 
+$(function () {
+    mainScript.addArrow("up", "garden_startpath4", 55, 43);
+    mainScript.addArrow("down", "garden_startpath2", 92, 40);
+});
+%>
+</snippet>
+
+<snippet tags="dream" name="garden_startpath4">
+<div class="absoluteAlign bothHalves gameBg" style="background-image: url('assets/9_path4.png.gif'); background-size: cover">
+</div>
+
+<% 
+$(function () {
+    mainScript.addArrow("up", "garden_startpath5", 59, 53);
+    mainScript.addArrow("down", "garden_startpath3", 92, 53);
+});
+%>
+</snippet>
+
+<snippet tags="dream" name="garden_startpath5">
+<div class="absoluteAlign bothHalves gameBg" style="background-image: url('assets/9_path5.png.gif'); background-size: cover">
+</div>
+
+<% 
+$(function () {
+    mainScript.addArrow("up", "garden_startpath6", 49, 67);
+    mainScript.addArrow("down", "garden_startpath4", 92, 67);
+});
+%>
+</snippet>
+
+<snippet tags="dream" name="garden_startpath6">
+
+<div class="absoluteAlign bothHalves gameBg" style="background-image: url('assets/9_path6.png.gif'); background-size: cover">
+</div>
+
+<% 
+$(function () {
+    mainScript.addArrow("up", "garden_startpath3-2", 55, 27)
+    mainScript.addArrow("down", "garden_startpath5", 92, 30);
+});
+%>
+
+</snippet>
+
+<snippet tags="dream" name="garden_startpath3-2">
+<div class="absoluteAlign bothHalves gameBg" style="background-image: url('assets/9_path3.png.gif'); background-size: cover">
+</div>
+
+<% 
+$(function () {
+    mainScript.addArrow("up", "garden_startpath5-2", 55, 43);
+    mainScript.addArrow("down", "garden_startpath6", 92, 40);
+});
+%>
+</snippet>
+
+<snippet tags="dream" name="garden_startpath5-2">
+<div class="absoluteAlign bothHalves gameBg" style="background-image: url('assets/9_path5.png.gif'); background-size: cover">
+</div>
+
+<% 
+$(function () {
+    mainScript.addArrow("up", "garden_gate1", 49, 67);
+    mainScript.addArrow("down", "garden_startpath3-2", 92, 67);
+});
+%>
+</snippet>
+
+<snippet tags="dream" name="garden_gate1" start>
+
+<div class="absoluteAlign bothHalves gameBg" style="background-image: url('assets/9_gate1.png.gif'); background-size: cover; animation: blur 0.75s infinite alternate ease"></div>
+
+<div id="gate1" class="absoluteAlign bothHalves"></div>
+
+<% 
+$(function () {
+    mainScript.addArrow("down", "garden_startpath5-2", 92, 35);
+
+    const gate1 = document.getElementById("gate1");
+    gate1.style.cursor = "pointer";
+    gate1.addEventListener("click", () => {
+        mainScript.showDialogue(mainScript.dialogue.gate1)
+    });
+});
+%>
+
+</snippet>

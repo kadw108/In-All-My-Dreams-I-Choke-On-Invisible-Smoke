@@ -1,0 +1,30 @@
+<snippet tags="dream" name="garden_center">
+
+<div class="absoluteAlign bothHalves gameBg" style="background-image: url('assets/9_center1.png.gif'); background-size: cover">
+</div>
+
+<% 
+$(function () {
+    mainScript.addArrow("up", "garden_centerup");
+    mainScript.addArrow("down", "garden_startpath2", 87, 35);
+    mainScript.addArrow("right", "garden_glade0");
+    mainScript.addArrow("left", "garden_flower1");
+
+    mainScript.addNpc("assets/d_wesley.gif", 17, 32, 12, "Wesley", mainScript.dialogue.treasureDialogue);
+});
+%>
+
+</snippet>
+
+<snippet tags="dream" name="garden_centerup">
+
+<div class="absoluteAlign bothHalves gameBg" style="background-image: url('assets/9_center2.png.gif'); background-size: cover">
+</div>
+
+<% 
+$(function () {
+    mainScript.addArrow("down", "garden_center");
+});
+%>
+
+</snippet>

@@ -20,6 +20,7 @@
             "meta/styles/reset.css",
             "meta/styles/stylesheet.css",
             "meta/styles/fonts.css",
+            "meta/styles/animations.css",
             "meta/styles/specific.css"
         ]
     },

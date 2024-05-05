@@ -1,17 +1,67 @@
-.gameBg > * {
+#iff-snippet > * {
     position: absolute;
 }
 
-.arrow, .npc {
+.arrow,
+.npc {
     cursor: pointer;
+    z-index: 5;
 }
 
 .arrow {
-    width: 4%;    
+    width: 4%;
 }
 
 .closeButton {
     float: right;
     margin-right: 10px;
     margin-top: 5px;
-  }
+}
+
+.dialoguePanel {
+    z-index: 10;
+}
+
+#gate1 {
+    /* shimmer https://www.codeguage.com/blog/shimmer-effect-html-css */
+    background: linear-gradient(
+        45deg,
+        rgba(175, 175, 175, 0.1) 45%,
+        rgba(255, 255, 255, 0.1) 50%,
+        rgba(175, 175, 175, 0.1) 55%);
+    background-size: 300%;
+    background-position-x: 100%;
+
+    animation: shimmer 1s infinite linear;
+}
+@keyframes shimmer {
+    to {
+        background-position-x: 0%;
+    }
+}
+
+#gate2 {
+    /* rainbow https://codepen.io/nohoid/pen/eYXpNL */
+    background: linear-gradient(
+        100deg,
+        rgba(255, 255, 0, 0.1),
+        rgba(0, 255, 0, 0.1),
+        rgba(0, 255, 255, 0.1),
+        rgba(0, 0, 255, 0.1),
+        rgba(255, 0, 255, 0.1));
+    background-size: 1800%;
+    background-position-x: 100%;
+
+    animation: rainbow 2s infinite linear;
+}
+@keyframes rainbow {
+    0% {
+        background-position: 0% 82%;
+    }
+    50% {
+        background-position: 100% 19%;
+    }
+    100% {
+        background-position: 0% 82%;
+    }
+}

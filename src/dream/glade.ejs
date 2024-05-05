@@ -1,0 +1,55 @@
+<snippet tags="dream" name="garden_glade0">
+
+<div class="absoluteAlign bothHalves gameBg" style="background-image: url('assets/9_garden.png.gif'); background-size: cover">
+</div>
+
+<% 
+$(function () {
+    mainScript.addArrow("left", "garden_center");
+    mainScript.addArrow("right", "garden_glade1");
+    mainScript.addArrow("down", "garden_glade2");
+});
+%>
+
+</snippet>
+
+
+<snippet tags="dream" name="garden_glade1">
+
+<div class="absoluteAlign bothHalves gameBg" style="background-image: url('assets/9_garden4.png.gif'); background-size: cover">
+</div>
+
+<% 
+$(function () {
+    mainScript.addArrow("left", "garden_glade0");
+});
+%>
+
+</snippet>
+
+<snippet tags="dream" name="garden_glade2">
+
+<div class="absoluteAlign bothHalves gameBg" style="background-image: url('assets/9_garden2.png.gif'); background-size: cover">
+</div>
+
+<% 
+$(function () {
+    mainScript.addArrow("up", "garden_glade0");
+    mainScript.addArrow("right", "garden_glade3");
+});
+%>
+
+</snippet>
+
+<snippet tags="dream" name="garden_glade3">
+
+<div class="absoluteAlign bothHalves gameBg" style="background-image: url('assets/9_garden3.png.gif'); background-size: cover">
+</div>
+
+<% 
+$(function () {
+    mainScript.addArrow("left", "garden_glade2");
+});
+%>
+
+</snippet>
