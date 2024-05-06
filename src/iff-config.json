@@ -20,8 +20,13 @@
             "meta/styles/reset.css",
             "meta/styles/stylesheet.css",
             "meta/styles/fonts.css",
-            "meta/styles/animations.css",
-            "meta/styles/specific.css"
+            "meta/styles/specific/all.css"
+        ],
+        "tags": [
+            {
+                "rule": "dream",
+                "files": ["meta/styles/specific/animations.css", "meta/styles/specific/dream.css"]
+            }
         ]
     },
     "validation": {

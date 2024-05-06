@@ -1,0 +1,12 @@
+#iff-snippet div.textPanel {
+    /*
+    width: 50%;
+    height: 50%;
+    */
+    width: 400px;
+    height: 300px;
+    margin: auto;
+    padding: 10px;
+
+    overflow: scroll;
+}

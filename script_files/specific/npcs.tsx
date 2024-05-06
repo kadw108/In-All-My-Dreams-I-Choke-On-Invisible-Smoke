@@ -201,7 +201,10 @@ export const dialogue: dialogueObject = {
             text: "...",
         },
         {
-            text: "Everything is bright and infinitely detailed...",
+            text: "It burns.",
+        },
+        {
+            text: "The pain is sweet.",
             playerOptions: [{text: "WAKE UP", nextPassage: null}]
         }
     ]
