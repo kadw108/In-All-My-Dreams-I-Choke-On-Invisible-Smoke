@@ -21,7 +21,7 @@ function clickReplaceLink(event) {
         console.error(event.target);
         return;
     }
-    replacers.forEach(r => {
+    replacers.forEach((r) => {
         if (!r.classList.contains("hidden")) {
             return;
         }
@@ -29,7 +29,7 @@ function clickReplaceLink(event) {
     });
 
     const removed = document.querySelectorAll(".removedOnClick[identifier='" + identifier + "']");
-    removed.forEach(r => {
+    removed.forEach((r) => {
         r.classList.add("hidden");
     });
 }
@@ -43,7 +43,7 @@ function clickHideText(event) {
         console.error(event.target);
         return;
     }
-    replacers.forEach(r => {
+    replacers.forEach((r) => {
         if (r.classList.contains("hidden")) {
             return;
         }
@@ -51,17 +51,17 @@ function clickHideText(event) {
     });
 
     const removed = document.querySelectorAll(".removedOnClick[identifier='" + identifier + "']");
-    removed.forEach(r => {
+    removed.forEach((r) => {
         r.classList.remove("hidden");
     });
 }
 
 export function addReplaceLink() {
-    Array.from(document.getElementsByClassName("linkReplaced")).forEach(e => {
+    Array.from(document.getElementsByClassName("linkReplaced")).forEach((e) => {
         e.addEventListener("click", clickReplaceLink);
     });
 
-    Array.from(document.getElementsByClassName("linkHider")).forEach(e => {
+    Array.from(document.getElementsByClassName("linkHider")).forEach((e) => {
         e.addEventListener("click", clickHideText);
     });
 }

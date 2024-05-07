@@ -23,7 +23,12 @@ $(function () {
     mainScript.addArrow("up", "garden2_centerupup");
     mainScript.addArrow("down", "garden2_center");
 
-    mainScript.addNpc("assets/d_wesley.gif", 17, 32, 12, "Wesley", mainScript.dialogue.treasureDialogue);
+    if (!story.lilyPicked) {
+        mainScript.addNpc("assets/d_wesley.gif", 17, 32, 12, "Wesley", mainScript.dialogue.treasureDialogue);
+    }
+    else {
+        mainScript.addNpc("assets/d_wesley.gif", 17, 32, 12, "Wesley", mainScript.dialogue.treasureDialogue2);
+    }
 });
 %>
 
@@ -54,7 +59,11 @@ $(function () {
 $(function () {
     mainScript.addArrow("down", "garden2_centerupup");
 
-    mainScript.addNpc("assets/d_lily.gif", 20, 65, 30, "Lily", mainScript.dialogue.gateDialogue);
+    if (!story.lilyPicked) {
+        mainScript.addNpc("assets/d_lily.gif", 20, 65, 30, "Lily", mainScript.dialogue.gateDialogue);
+    } else {
+        mainScript.addNpc("assets/d_lily.gif", 20, 65, 30, "Lily", mainScript.dialogue.gateDialogue2);
+    }
 
     const gate1 = document.getElementById("gate1");
     gate1.style.cursor = "pointer";

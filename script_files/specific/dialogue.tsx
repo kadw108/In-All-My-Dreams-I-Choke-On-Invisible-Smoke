@@ -8,6 +8,15 @@ export const dialogue: dialogueObject = {
             playerOptions: [{ text: "⮕ End", nextPassage: null }],
         },
     ],
+    treasureDialogue2: [
+        {
+            text: "Oh! You've found the treasure... I can see it on you!",
+        },
+        {
+            text: "You're so brave.",
+            playerOptions: [{ text: "⮕ End", nextPassage: null }],
+        },
+    ],
 
     travelDialogue: [
         {
@@ -86,23 +95,44 @@ export const dialogue: dialogueObject = {
             text: "You need to grow beyond the confines of the physical world. A flowering is needed for this.",
         },
         {
-            text: "You'll need a flower, maybe two.",
+            text: "You'll need a flower, maybe two... No, one will do.",
+            playerOptions: [{ text: "⮕ End", nextPassage: null }],
+        },
+    ],
+    flowerDialogue2: [
+        {
+            text: "A fine start... Still, more is needed.",
         },
         {
-            text: "No, one will do.",
+            text: "Heed my words.",
             playerOptions: [{ text: "⮕ End", nextPassage: null }],
         },
     ],
 
     gateDialogue: [
         {
-            text: "You again.",
+            text: "You again...",
         },
         {
-            text: "You do know you are intruding...? To pass the rubicon is no light task.",
+            text: "You do know you are intruding...?",
         },
         {
-            text: "Only the worthy are allowed beyond this gate.",
+            text: "I seldom see your kind. To cross the rubicon is no light task.",
+        },
+        {
+            text: "Only the worthy are allowed beyond here.",
+            playerOptions: [{ text: "⮕ End", nextPassage: null }],
+        },
+    ],
+    gateDialogue2: [
+        {
+            text: "You're still here...",
+        },
+        {
+            text: "You have marked yourself, at least. It's a start.",
+        },
+        {
+            text: "It ought to be worth testing whether the gate opens for you, now.",
             playerOptions: [{ text: "⮕ End", nextPassage: null }],
         },
     ],
@@ -177,19 +207,50 @@ export const dialogue: dialogueObject = {
             playerOptions: [{ text: "⮕ End", nextPassage: null }],
         },
     ],
+    gate2b: [
+        {
+            text: "I think I can hear music beyond the veil...",
+        },
+        {
+            text: "Pass through?",
+            playerOptions: [
+                { text: "Yes", nextPassage: 2 },
+                { text: "No", nextPassage: null },
+            ],
+        },
+        {
+            text: "...",
+        },
+        {
+            text: "There's something there...",
+        },
+        {
+            text: "I...",
+            playerOptions: [
+                {
+                    text: "WAKE UP",
+                    nextPassage: null,
+                    callback: () => {
+                        // @ts-expect-error (for story)
+                        story.showSnippet("youA_transition");
+                    },
+                },
+            ],
+        },
+    ],
 
     lily1: [
         {
             text: "Something growing here.",
             playerOptions: [
                 {
-                    text: "Pick it up.",
+                    text: "Pick it.",
                     nextPassage: null,
                     callback: () => {
                         playCutscene("assets/cutscene1_2.gif", 6500);
                         document.getElementById("lily1").remove();
                         // @ts-expect-error (for story)
-                        story.myInventory.addItem({name: "lily", iconSrc: "assets/item1.gif"});
+                        story.myInventory.addItem({ name: "lily", iconSrc: "assets/item1.gif" });
 
                         // @ts-expect-error (for story)
                         story.myInventory.addInventory();

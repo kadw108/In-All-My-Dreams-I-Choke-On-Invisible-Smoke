@@ -1,17 +1,17 @@
 import { h } from "dom-chef";
 
 type Item = {
-    name: string,
-    iconSrc: string
+    name: string;
+    iconSrc: string;
 };
 
 export class Inventory {
     items: Array<Item>;
-    
+
     constructor() {
         this.items = [];
-    } 
-    
+    }
+
     addItem(item: Item) {
         this.items.push(item);
     }
@@ -28,7 +28,7 @@ export class Inventory {
     addInventory() {
         const inventoryDiv = <div id="inventory"></div>;
         for (const item of this.items) {
-            inventoryDiv.append(<img src={item.iconSrc}/>);
+            inventoryDiv.append(<img src={item.iconSrc} />);
         }
 
         const iffSnippet = document.getElementById("iff-snippet");

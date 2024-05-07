@@ -36,7 +36,7 @@ export function addWrapperHtml() {
                     </div>
                 </div>
             </div>
-        ); 
+        );
 
         document.getElementById("iff-story")?.appendChild(contents);
     }

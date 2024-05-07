@@ -14,9 +14,7 @@ function openMenuPanel(event: Event) {
     }
 
     const identifier = (event.target as HTMLElement).getAttribute("identifier");
-    const replacer = document.querySelector(
-        ".panelFull[identifier='" + identifier + "']"
-    );
+    const replacer = document.querySelector(".panelFull[identifier='" + identifier + "']");
 
     if (replacer === null) {
         console.error("Replacelink without replacer!");

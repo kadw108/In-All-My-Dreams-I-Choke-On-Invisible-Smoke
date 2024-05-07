@@ -23,7 +23,11 @@ $(function () {
 $(function () {
     mainScript.addArrow("left", "garden2_glade0");
 
-    mainScript.addNpc("assets/d_tanqing.gif", 20, 30, 25, "Tanqing", mainScript.dialogue.flowerDialogue);
+    if (!story.lilyPicked) {
+        mainScript.addNpc("assets/d_tanqing.gif", 20, 30, 25, "Tanqing", mainScript.dialogue.flowerDialogue);
+    } else {
+        mainScript.addNpc("assets/d_tanqing.gif", 20, 30, 25, "Tanqing", mainScript.dialogue.flowerDialogue2);
+    }
 });
 %>
 
