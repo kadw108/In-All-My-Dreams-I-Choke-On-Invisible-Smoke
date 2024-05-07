@@ -9,4 +9,28 @@
     padding: 10px;
 
     overflow: scroll;
+
+    z-index: 10;
+}
+
+#iff-snippet div.cutscenePanel {
+    width: 175px;
+    height: 175px;
+    margin: auto;
+    padding: 0px;
+    overflow: hidden;
+
+    border-image: url("assets/black1.gif");
+    border-color: #222;
+    border-image-slice: 8;
+    border-width: 7px;
+    border-image-repeat: repeat;
+
+    z-index: 10;
+}
+div.cutscenePanel > img {
+    width: 100%;
+}
+div.cutscenePanel > .closeButton {
+    position: absolute;
 }

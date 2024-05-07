@@ -1,5 +1,27 @@
 import { h } from "dom-chef";
 
+/*
+Returns the close button so functions that call this
+can add more event listeners to it
+*/
+function addCloseButton(element: Element): Element {
+    const closeButton = (
+        <button type="button" className="closeButton">
+            X
+        </button>
+    );
+    closeButton.addEventListener("click", () => {
+        element.remove();
+    });
+    element.prepend(closeButton);
+    return closeButton;
+}
+
+export function clearAndAddCloseButton(element: Element) {
+    element.innerHTML = "";
+    addCloseButton(element);
+}
+
 export function addArrow(direction: string, destination: string, top: number | undefined = undefined, left: number | undefined = undefined): void {
     const container = document.getElementById("iff-snippet");
     const arrow = <img className="arrow" src="assets/arrow.gif" alt="arrow"></img>;
@@ -36,10 +58,27 @@ export function addArrow(direction: string, destination: string, top: number | u
         arrow.style.left = left + "%";
     }
 
-    arrow.addEventListener("click" , () => {
+    arrow.addEventListener("click", () => {
         // @ts-expect-error (for story)
         story.showSnippet(destination);
-    })
+    });
 
     container.append(arrow);
+}
+
+export function playCutscene(gifSrc: string, gifMilliseconds: number) {
+    const cutsceneDiv = <div className="absoluteAlign blackBg cutscenePanel"><img src={gifSrc}/></div>;
+
+    const screenCover = document.getElementById("screenCover");
+    screenCover.style.display = "block";
+
+    const container = document.getElementById("iff-snippet");
+    container.append(cutsceneDiv);
+
+    setTimeout(() => {
+        const closeButton = addCloseButton(cutsceneDiv);
+        closeButton.addEventListener("click", () => {
+            screenCover.style.display = "none";
+        })
+    }, gifMilliseconds);
 }
