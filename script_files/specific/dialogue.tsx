@@ -194,7 +194,7 @@ export const dialogue: dialogueObject = {
     ],
     gate2b: [
         {
-            text: "...There is music beyond the veil.",
+            text: "...I can hear music.",
         },
         {
             text: "Pass through?",
@@ -207,18 +207,18 @@ export const dialogue: dialogueObject = {
             text: "...",
         },
         {
-            text: "It hurts...",
+            text: "It is beautiful...",
         },
         {
-            text: "I have never felt anything more beautiful...",
-        },
-        {
-            text: "...",
+            text: "And it hurts.",
             playerOptions: [
                 {
                     text: "WAKE UP",
                     nextPassage: null,
                     callback: () => {
+                        // @ts-expect-error (for story)
+                        story.myInventory.removeItem("lily");
+
                         // @ts-expect-error (for story)
                         story.showSnippet("homeB_transition");
                     },
@@ -241,7 +241,7 @@ export const dialogue: dialogueObject = {
                         story.myInventory.addItem({ name: "lily", iconSrc: "assets/item1.gif" });
 
                         // @ts-expect-error (for story)
-                        story.myInventory.addInventory();
+                        story.myInventory.addInventoryPanel();
 
                         // @ts-expect-error (for story)
                         story.lilyPicked = true;

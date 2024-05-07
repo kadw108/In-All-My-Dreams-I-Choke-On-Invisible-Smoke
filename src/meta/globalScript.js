@@ -4,7 +4,7 @@ $(function () {
     mainScript.addMenuPanels();
 
     if (snippet.tags.includes("dream")) {
-        story.myInventory.addInventory();
+        story.myInventory.addInventoryPanel();
     }
 
     const bottomHalf = document.querySelector("div.absoluteAlign.bottomHalf");

@@ -1,6 +1,7 @@
 rm -f ../export/index.html
 cd script_files
-npx esbuild index.js --bundle --minify --outfile=../src/meta/typeScriptMain.js --global-name=mainScript
+# npx esbuild index.js --bundle --minify --outfile=../src/meta/typeScriptMain.js --global-name=mainScript
+npx esbuild index.js --bundle --outfile=../src/meta/typeScriptMain.js --global-name=mainScript
 
 # make crumblingcastle globally accessible
 # from https://stackoverflow.com/questions/64806255/how-to-expose-a-class-to-the-global-scope-with-esbuild
