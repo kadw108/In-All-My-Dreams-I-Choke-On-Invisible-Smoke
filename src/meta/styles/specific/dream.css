@@ -53,6 +53,8 @@
     background-position-x: 100%;
 
     animation: rainbow 2s infinite linear;
+
+    z-index: 4;
 }
 @keyframes rainbow {
     0% {

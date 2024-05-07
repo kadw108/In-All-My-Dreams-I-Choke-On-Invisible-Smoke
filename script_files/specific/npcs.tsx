@@ -3,6 +3,7 @@ import { h } from "dom-chef";
 type PlayerOption = {
     text: string,
     nextPassage: number | null, // index of the dialogue this option leads to; null to close dialogue box
+    callback?: Function | undefined, // callback function executed upon selecting this option. Can be anything.
 }
 type Dialogue = {
     text: string, // actual text contents of npc dialogue
@@ -47,6 +48,11 @@ export function showDialogue(dialogueList: Array<Dialogue>, index: number = 0) {
                 optionHtml.addEventListener("click", () => {
                     dialoguePanel.remove();
                 });
+            }
+            if (option.callback !== undefined) {
+                optionHtml.addEventListener("click", () => {
+                    option.callback();
+                })
             }
             dialoguePanel.append(optionHtml);
 
@@ -126,7 +132,7 @@ export const dialogue: dialogueObject = {
 
     "mournDialogue": [
         {
-            text: "This garden has fallen into disrepair. What a shame. What a shame. How foolish you and I were, to give up the best and brightest of all things.",
+            text: "This garden has fallen into disrepair. What a shame. What a shame. How foolish you and I were, to give up the best of all things.",
         },
         {
             text: "In return for what? A world full of smoke...",
@@ -188,7 +194,10 @@ export const dialogue: dialogueObject = {
 
     "gate1": [
         {
-            text: "It shimmers..."
+            text: "The trees are losing their definition. There is something beyond them, shimmering..."
+        },
+        {
+            text: "It is beautiful in a way I cannot describe.",
         },
         {
             text: "...",
@@ -201,11 +210,25 @@ export const dialogue: dialogueObject = {
             text: "...",
         },
         {
-            text: "It burns.",
-        },
-        {
-            text: "The pain is sweet.",
-            playerOptions: [{text: "WAKE UP", nextPassage: null}]
+            text: "It burns...",
+            playerOptions: [{text: "WAKE UP", nextPassage: null, callback: 
+                () => {
+                    // @ts-expect-error (for story)
+                    story.showSnippet("youA_transition");
+                }
+            }]
         }
+    ],
+    
+    "gate1_2": [
+        {
+            text: "The trees part for me easily.",
+            playerOptions: [{text: "Enter", nextPassage: null, callback: 
+                () => {
+                    // @ts-expect-error (for story)
+                    story.showSnippet("garden2_center");
+                }
+            }]
+        },
     ]
 } 
