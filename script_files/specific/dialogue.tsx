@@ -5,7 +5,6 @@ export const dialogue: dialogueObject = {
     treasureDialogue: [
         {
             text: "Good news: to celebrate your arrival, they planted a treasure in the eastern glade. You should go find it!",
-            playerOptions: [{ text: "⮕ End", nextPassage: null }],
         },
     ],
     treasureDialogue2: [
@@ -14,7 +13,6 @@ export const dialogue: dialogueObject = {
         },
         {
             text: "You're so brave.",
-            playerOptions: [{ text: "⮕ End", nextPassage: null }],
         },
     ],
 
@@ -41,7 +39,6 @@ export const dialogue: dialogueObject = {
         },
         {
             text: "Oh, you were joking? Oh... okay...",
-            playerOptions: [{ text: "⮕ End", nextPassage: null }],
         },
     ],
 
@@ -51,7 +48,6 @@ export const dialogue: dialogueObject = {
         },
         {
             text: "In return for what? A world full of smoke...",
-            playerOptions: [{ text: "⮕ End", nextPassage: null }],
         },
     ],
 
@@ -68,7 +64,6 @@ export const dialogue: dialogueObject = {
         },
         {
             text: "Uh, what? You can't. That's the whole point. Haha.",
-            playerOptions: [{ text: "⮕ End", nextPassage: null }],
         },
     ],
 
@@ -86,7 +81,6 @@ export const dialogue: dialogueObject = {
         },
         {
             text: "Take care! Don't die of the invisible smoke!",
-            playerOptions: [{ text: "⮕ End", nextPassage: null }],
         },
     ],
 
@@ -96,7 +90,6 @@ export const dialogue: dialogueObject = {
         },
         {
             text: "You'll need a flower, maybe two... No, one will do.",
-            playerOptions: [{ text: "⮕ End", nextPassage: null }],
         },
     ],
     flowerDialogue2: [
@@ -105,7 +98,6 @@ export const dialogue: dialogueObject = {
         },
         {
             text: "Heed my words.",
-            playerOptions: [{ text: "⮕ End", nextPassage: null }],
         },
     ],
 
@@ -121,7 +113,6 @@ export const dialogue: dialogueObject = {
         },
         {
             text: "Only the worthy are allowed beyond here.",
-            playerOptions: [{ text: "⮕ End", nextPassage: null }],
         },
     ],
     gateDialogue2: [
@@ -129,11 +120,10 @@ export const dialogue: dialogueObject = {
             text: "You're still here...",
         },
         {
-            text: "You have marked yourself, at least. It's a start.",
+            text: "At least you have marked yourself this time.",
         },
         {
             text: "It ought to be worth testing whether the gate opens for you, now.",
-            playerOptions: [{ text: "⮕ End", nextPassage: null }],
         },
     ],
 
@@ -143,7 +133,6 @@ export const dialogue: dialogueObject = {
         },
         {
             text: "And it will be more beautiful than anything you can conceive.",
-            playerOptions: [{ text: "⮕ End", nextPassage: null }],
         },
     ],
 
@@ -202,14 +191,10 @@ export const dialogue: dialogueObject = {
         {
             text: "It hurts to look at...",
         },
-        {
-            text: "I am afraid.",
-            playerOptions: [{ text: "⮕ End", nextPassage: null }],
-        },
     ],
     gate2b: [
         {
-            text: "I think I can hear music beyond the veil...",
+            text: "...There is music beyond the veil.",
         },
         {
             text: "Pass through?",
@@ -222,17 +207,20 @@ export const dialogue: dialogueObject = {
             text: "...",
         },
         {
-            text: "There's something there...",
+            text: "It hurts...",
         },
         {
-            text: "I...",
+            text: "I have never felt anything more beautiful...",
+        },
+        {
+            text: "...",
             playerOptions: [
                 {
                     text: "WAKE UP",
                     nextPassage: null,
                     callback: () => {
                         // @ts-expect-error (for story)
-                        story.showSnippet("youA_transition");
+                        story.showSnippet("homeB_transition");
                     },
                 },
             ],

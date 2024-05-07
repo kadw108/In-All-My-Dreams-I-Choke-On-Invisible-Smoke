@@ -62,10 +62,19 @@ export function showDialogue(dialogueList: Array<Dialogue>, index: number = 0) {
             }
         }
     } else {
-        const optionHtml = <a>⮕ Next</a>;
-        optionHtml.addEventListener("click", () => {
-            showDialogue(dialogueList, index + 1);
-        });
+        let optionHtml: Element;
+        if (index < dialogueList.length - 1) {
+            optionHtml = <a>⮕ Next</a>;
+            optionHtml.addEventListener("click", () => {
+                showDialogue(dialogueList, index + 1);
+            });
+        }
+        else {
+            optionHtml = <a>⮕ End</a>;
+            optionHtml.addEventListener("click", () => {
+                dialoguePanel.remove();
+            });
+        }
         dialoguePanel.append(optionHtml);
     }
 }

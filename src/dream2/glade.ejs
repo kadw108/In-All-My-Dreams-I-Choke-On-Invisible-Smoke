@@ -1,0 +1,65 @@
+<snippet tags="dream" name="garden3_glade0">
+
+<div class="absoluteAlign bothHalves gameBg" style="background-image: url('assets/9_garden.png.gif'); background-size: cover">
+</div>
+
+<% 
+$(function () {
+    mainScript.addArrow("left", "garden3_center");
+    mainScript.addArrow("right", "garden3_glade1");
+    mainScript.addArrow("down", "garden3_glade2");
+});
+%>
+
+</snippet>
+
+
+<snippet tags="dream" name="garden3_glade1">
+
+<div class="absoluteAlign bothHalves gameBg" style="background-image: url('assets/9_garden4.png.gif'); background-size: cover">
+</div>
+
+<% 
+$(function () {
+    mainScript.addArrow("left", "garden3_glade0");
+
+    if (!story.lilyPicked) {
+        mainScript.addNpc("assets/d_tanqing.gif", 20, 30, 25, "Tanqing", mainScript.dialogue.flowerDialogue);
+    } else {
+        mainScript.addNpc("assets/d_tanqing.gif", 20, 30, 25, "Tanqing", mainScript.dialogue.flowerDialogue2);
+    }
+});
+%>
+
+</snippet>
+
+<snippet tags="dream" name="garden3_glade2">
+
+<div class="absoluteAlign bothHalves gameBg" style="background-image: url('assets/9_garden3.png.gif'); background-size: cover">
+</div>
+
+<% 
+$(function () {
+    mainScript.addArrow("up", "garden3_glade0");
+    mainScript.addArrow("right", "garden3_glade3");
+});
+%>
+
+</snippet>
+
+<snippet tags="dream" name="garden3_glade3">
+
+<div class="absoluteAlign bothHalves gameBg" style="background-image: url('assets/9_garden3.png.gif'); background-size: cover">
+</div>
+
+<% 
+$(function () {
+    mainScript.addArrow("left", "garden3_glade2");
+
+    if (!story.lilyPicked) {
+        mainScript.addNpc("assets/lily1.gif", 35, 20, 25, "lily1", mainScript.dialogue.lily1);
+    }
+});
+%>
+
+</snippet>

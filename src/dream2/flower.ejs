@@ -1,0 +1,44 @@
+<snippet tags="dream" name="garden3_flower1">
+
+<div class="absoluteAlign bothHalves gameBg" style="background-image: url('assets/9_flower1.png.gif'); background-size: cover">
+</div>
+
+<% 
+$(function () {
+    mainScript.addArrow("left", "garden3_flower2");
+    mainScript.addArrow("right", "garden3_center");
+    mainScript.addArrow("up", "garden3_flowerup")
+});
+%>
+
+</snippet>
+
+<snippet tags="dream" name="garden3_flowerup">
+
+<div class="absoluteAlign bothHalves gameBg" style="background-image: url('assets/9_flower2.png.gif'); background-size: cover">
+</div>
+
+<% 
+$(function () {
+    mainScript.addArrow("down", "garden3_flower1");
+
+    mainScript.addNpc("assets/d_cheeyon.gif", 30, 25, 25, "Cheeyon", mainScript.dialogue.smokeDialogue1);
+});
+%>
+
+</snippet>
+
+<snippet tags="dream" name="garden3_flower2">
+
+<div class="absoluteAlign bothHalves gameBg" style="background-image: url('assets/9_flower3.png.gif'); background-size: cover">
+</div>
+
+<% 
+$(function () {
+    mainScript.addArrow("right", "garden3_flower1");
+    mainScript.addNpc("assets/d_joyce.gif", 70, 65, 23, "Joyce", mainScript.dialogue.travelDialogue);
+});
+%>
+
+
+</snippet>

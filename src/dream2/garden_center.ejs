@@ -1,27 +1,27 @@
-<snippet tags="dream" name="garden2_center">
+<snippet tags="dream" name="garden3_center">
 
 <div class="absoluteAlign bothHalves gameBg" style="background-image: url('assets/9_center1.png.gif'); background-size: cover">
 </div>
 
 <% 
 $(function () {
-    mainScript.addArrow("up", "garden2_centerup");
-    mainScript.addArrow("right", "garden2_glade0");
-    mainScript.addArrow("left", "garden2_flower1");
+    mainScript.addArrow("up", "garden3_centerup");
+    mainScript.addArrow("right", "garden3_glade0");
+    mainScript.addArrow("left", "garden3_flower1");
 });
 %>
 
 </snippet>
 
-<snippet tags="dream" name="garden2_centerup">
+<snippet tags="dream" name="garden3_centerup">
 
 <div class="absoluteAlign bothHalves gameBg" style="background-image: url('assets/9_center2.png.gif'); background-size: cover">
 </div>
 
 <% 
 $(function () {
-    mainScript.addArrow("up", "garden2_centerupup");
-    mainScript.addArrow("down", "garden2_center");
+    mainScript.addArrow("up", "garden3_centerupup");
+    mainScript.addArrow("down", "garden3_center");
 
     if (!story.lilyPicked) {
         mainScript.addNpc("assets/d_wesley.gif", 17, 32, 12, "Wesley", mainScript.dialogue.treasureDialogue);
@@ -34,21 +34,21 @@ $(function () {
 
 </snippet>
 
-<snippet tags="dream" name="garden2_centerupup">
+<snippet tags="dream" name="garden3_centerupup">
 
 <div class="absoluteAlign bothHalves gameBg" style="background-image: url('assets/9_center1.png.gif'); background-size: cover">
 </div>
 
 <% 
 $(function () {
-    mainScript.addArrow("up", "garden2_centerupupup");
-    mainScript.addArrow("down", "garden2_centerup");
+    mainScript.addArrow("up", "garden3_centerupupup");
+    mainScript.addArrow("down", "garden3_centerup");
 });
 %>
 
 </snippet>
 
-<snippet tags="dream" name="garden2_centerupupup">
+<snippet tags="dream" name="garden3_centerupupup">
 
 <div class="absoluteAlign bothHalves gameBg" style="background-image: url('assets/garden_center.gif'); background-size: cover; animation: blur 0.25s infinite alternate ease">
 </div>
@@ -57,7 +57,7 @@ $(function () {
 
 <% 
 $(function () {
-    mainScript.addArrow("down", "garden2_centerupup");
+    mainScript.addArrow("down", "garden3_centerupup");
 
     const gate1 = document.getElementById("gate1");
     gate1.style.cursor = "pointer";
