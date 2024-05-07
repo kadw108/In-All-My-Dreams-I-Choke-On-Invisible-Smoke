@@ -2,15 +2,15 @@ import { h } from "dom-chef";
 import { clearAndAddCloseButton } from "./utility";
 
 type PlayerOption = {
-    text: string,
-    nextPassage: number | null, // index of the dialogue this option leads to; null to close dialogue box
-    callback?: Function | undefined, // callback function executed upon selecting this option. Can be anything.
-}
+    text: string;
+    nextPassage: number | null; // index of the dialogue this option leads to; null to close dialogue box
+    callback?: Function | undefined; // callback function executed upon selecting this option. Can be anything.
+};
 type Dialogue = {
-    text: string, // actual text contents of npc dialogue
-    playerOptions?: Array<PlayerOption> | undefined, // options player has for responding
-}
-export type dialogueObject = { [id: string]: Array<Dialogue>; };
+    text: string; // actual text contents of npc dialogue
+    playerOptions?: Array<PlayerOption> | undefined; // options player has for responding
+};
+export type dialogueObject = { [id: string]: Array<Dialogue> };
 
 export function addNpc(src: string, top: number, left: number, width: number, name: string, dialogueList: Array<Dialogue>): void {
     const container = document.getElementById("iff-snippet");
@@ -22,7 +22,7 @@ export function addNpc(src: string, top: number, left: number, width: number, na
 
     npc.addEventListener("click", () => {
         showDialogue(dialogueList);
-    })
+    });
 
     container.append(npc);
 }
@@ -36,7 +36,7 @@ export function showDialogue(dialogueList: Array<Dialogue>, index: number = 0) {
     const dialogueText = <p>{dialogue.text}</p>;
     dialoguePanel.append(dialogueText);
 
-    dialoguePanel.append(<br/>);
+    dialoguePanel.append(<br />);
     if (dialogue.playerOptions !== undefined) {
         for (let i = 0; i < dialogue.playerOptions.length; i++) {
             const option = dialogue.playerOptions[i];
@@ -45,8 +45,7 @@ export function showDialogue(dialogueList: Array<Dialogue>, index: number = 0) {
                 optionHtml.addEventListener("click", () => {
                     showDialogue(dialogueList, option.nextPassage);
                 });
-            }
-            else {
+            } else {
                 optionHtml.addEventListener("click", () => {
                     dialoguePanel.remove();
                 });
@@ -54,7 +53,7 @@ export function showDialogue(dialogueList: Array<Dialogue>, index: number = 0) {
             if (option.callback !== undefined) {
                 optionHtml.addEventListener("click", () => {
                     option.callback();
-                })
+                });
             }
             dialoguePanel.append(optionHtml);
 
@@ -62,8 +61,7 @@ export function showDialogue(dialogueList: Array<Dialogue>, index: number = 0) {
                 dialoguePanel.append(<span>&nbsp;|&nbsp;</span>);
             }
         }
-    }
-    else {
+    } else {
         const optionHtml = <a>⮕ Next</a>;
         optionHtml.addEventListener("click", () => {
             showDialogue(dialogueList, index + 1);
@@ -82,10 +80,7 @@ function getDialoguePanel(): Element {
 }
 
 function createDialoguePanel(): HTMLElement {
-    const dialoguePanel = (
-        <div className="absoluteAlign bottomHalf blackBg dialoguePanel">
-        </div>
-    );
+    const dialoguePanel = <div className="absoluteAlign bottomHalf blackBg dialoguePanel"></div>;
     clearAndAddCloseButton(dialoguePanel);
 
     const iffSnippet = document.getElementById("iff-snippet");

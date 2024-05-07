@@ -3,6 +3,10 @@ $(function () {
     mainScript.addReplaceLink();
     mainScript.addMenuPanels();
 
+    if (snippet.tags.includes("dream")) {
+        story.myInventory.addInventory();
+    }
+
     const bottomHalf = document.querySelector("div.absoluteAlign.bottomHalf");
     if (story.transitionMessage !== null) {
         const message = document.createElement("p");

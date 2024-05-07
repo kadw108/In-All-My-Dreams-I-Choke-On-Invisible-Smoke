@@ -52,7 +52,9 @@ $(function () {
 $(function () {
     mainScript.addArrow("left", "garden2_glade2");
 
-    mainScript.addNpc("assets/lily1.gif", 35, 20, 25, "lily1", mainScript.dialogue.lily1);
+    if (!story.lilyPicked) {
+        mainScript.addNpc("assets/lily1.gif", 35, 20, 25, "lily1", mainScript.dialogue.lily1);
+    }
 });
 %>
 

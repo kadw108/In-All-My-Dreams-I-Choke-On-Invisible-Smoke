@@ -67,7 +67,11 @@ export function addArrow(direction: string, destination: string, top: number | u
 }
 
 export function playCutscene(gifSrc: string, gifMilliseconds: number) {
-    const cutsceneDiv = <div className="absoluteAlign blackBg cutscenePanel"><img src={gifSrc}/></div>;
+    const cutsceneDiv = (
+        <div className="absoluteAlign blackBg cutscenePanel">
+            <img src={gifSrc} />
+        </div>
+    );
 
     const screenCover = document.getElementById("screenCover");
     screenCover.style.display = "block";
@@ -79,6 +83,6 @@ export function playCutscene(gifSrc: string, gifMilliseconds: number) {
         const closeButton = addCloseButton(cutsceneDiv);
         closeButton.addEventListener("click", () => {
             screenCover.style.display = "none";
-        })
+        });
     }, gifMilliseconds);
 }
