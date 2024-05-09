@@ -14,12 +14,13 @@
 
 .closeButton {
     float: right;
-    margin-right: 10px;
-    margin-top: 5px;
 }
 
 .dialoguePanel {
     z-index: 10;
+}
+.dialoguePanel p {
+    margin: 0;
 }
 
 #gate1 {

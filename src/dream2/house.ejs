@@ -20,7 +20,22 @@ $(function () {
 <% 
 $(function () {
     mainScript.addArrow("right", "garden3_house1_1");
-    mainScript.addArrow("up", "garden3_house1_2", 60, 7);
+    mainScript.addArrow("up", "garden3_houseInterior", 60, 7);
+
+    mainScript.addNpc("assets/d_amalgamia.gif", 45, 72, 10, "Amalgamia", mainScript.dialogue.amalgamiaDialogue);
+});
+%>
+
+</snippet>
+
+<snippet tags="dream" name="garden3_houseInterior">
+
+<div class="absoluteAlign bothHalves gameBg" style="background-image: url('assets/9_houseInterior.png.gif'); background-size: cover">
+</div>
+
+<% 
+$(function () {
+    mainScript.addArrow("down", "garden3_house1_2");
 });
 %>
 

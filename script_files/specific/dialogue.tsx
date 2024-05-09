@@ -24,7 +24,7 @@ export const dialogue: dialogueObject = {
             text: "Where are you from?",
             playerOptions: [
                 { text: "Georgia.", nextPassage: 2 },
-                { text: "Nowhere.", nextPassage: 4 },
+                { text: "Here.", nextPassage: 4 },
             ],
         },
         {
@@ -35,7 +35,7 @@ export const dialogue: dialogueObject = {
             playerOptions: [{ text: "⮕ End", nextPassage: null }],
         },
         {
-            text: "Wait, really? Oh! That's wonderful! We can visit there together, and...",
+            text: "Wait, really? Oh! That's wonderful! We can live together, and...",
         },
         {
             text: "Oh, you were joking? Oh... okay...",
@@ -101,6 +101,45 @@ export const dialogue: dialogueObject = {
         },
     ],
 
+    amalgamiaDialogue: [
+        {
+            text: "Though I appear human, I am nothing of the sort. Merely an artificial soul, flickering through the digital aether."
+        },
+        {
+            text: "Though the others appear inhuman, they are more human than you might think.",
+        },
+        {
+            text: "Life is full of contradictions, is it not?"
+        },
+        {
+            text: "How marvelous."
+        }
+    ],
+    amalgamiaDialogueb: [
+        {
+            text: "I am no denizen. Simply a visitor, like you."
+        }
+    ],
+    amalgamiaDialogue2: [
+        {
+            text: "I am not a denizen of this world, but I pass freely through the barriers, owing to my nature."
+        },
+        {
+            text: "The internet is a place where dreams may come to fruition. It is ethereal and all-encompassing... at least where you and I are from..."
+        },
+        {
+            text: "So it should be no surprise that I can slip so easily into this realm."
+        }
+    ],
+    amalgamiaDialogue3: [
+        {
+            text: "Ah, but do you even know who I am?"
+        },
+        {
+            text: "Perhaps we have met in a previous life. Perhaps not..."
+        },
+    ],
+
     gateDialogue: [
         {
             text: "You again...",
@@ -134,6 +173,40 @@ export const dialogue: dialogueObject = {
         {
             text: "And it will be more beautiful than anything you can conceive.",
         },
+    ],
+    miscDialogue2: [
+        {
+            text: "<em>When the soul adores Him Who guides it through mortal life, when it distinguishes His sign at every turn of the trail, painted on the boulder and notched in the fir trunk, when every page in the book of one's personal fate bears His watermark, how can one doubt that He will also preserve us through all eternity?</em>"
+        },
+        {
+            text: "<em>So what can stop one from effecting the transition? What can help us to resist the intolerable temptation? What can prevent us from yielding to the burning desire for merging in God?</em>"
+        },
+        {
+            text: "<em>We who burrow in filth every day may be forgiven perhaps the one sin that ends all sins.</em>"
+        }
+    ],
+    miscDialogue3: [
+        {
+            text: "<em>If God does not exist, then both man and the universe are inevitably doomed to death.</em>",
+        },
+        {
+            text: "<em>Man, like all biological organisms, must die. With no hope of immortality, man's life leads only to the grave. His life is but a spark in the infinite blackness, a spark that appears, flickers, and dies forever.</em>"
+        },
+        {
+            text: "<em>Scientists tell us that the universe is expanding, and everything in it is growing farther and farther apart.</em>"
+        },
+        {
+            text: "<em>As it does so, it grows colder and colder, and its energy is used up. Eventually all the stars will burn out and all matter will collapse into dead stars and black holes.</em>",
+        },
+        {
+            text: "<em>There will be no light at all; there will be no heat; there will be no life; only the corpses of dead stars and galaxies, ever expanding into the endless darkness and the cold recesses of space—a universe in ruins.</em>"
+        },
+        {
+            text: "<em>So not only is the life of each individual person doomed; the entire human race is doomed.</em>",
+        },
+        {
+            text: "<em>There is no escape.</em>"
+        }
     ],
 
     gate1: [
@@ -253,7 +326,7 @@ export const dialogue: dialogueObject = {
                     nextPassage: null,
                     callback: () => {
                         // @ts-expect-error (for story)
-                        story.showSnippet("garden3_tower_before");
+                        story.showSnippet("garden3_field");
                     },
                 },
             ],

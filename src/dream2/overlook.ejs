@@ -33,12 +33,14 @@ $(function () {
 
 <snippet tags="dream" name="garden3_overlook2">
 
-<div class="absoluteAlign bothHalves gameBg" style="background-image: url('assets/overlook2.gif'); background-size: cover">
+<div class="absoluteAlign bothHalves gameBg" style="background-image: url('assets/overlook2b.gif'); background-size: cover">
 </div>
 
 <% 
 $(function () {
     mainScript.addArrow("left", "garden3_overlook1", 85, 1);
+
+    mainScript.addNpc("assets/d_deer1.gif", 55, 40, 13, "Deer △", mainScript.dialogue.miscDialogue2);
 });
 %>
 
@@ -65,8 +67,21 @@ $(function () {
 
 <% 
 $(function () {
-    mainScript.addArrow("up", "garden3_house2_2", 57, 30);
+    mainScript.addArrow("up", "garden3_house2_inside", 57, 30);
     mainScript.addArrow("down", "garden3_house2_1", 90, 25);
+});
+%>
+
+</snippet>
+
+<snippet tags="dream" name="garden3_house2_inside">
+
+<div class="absoluteAlign bothHalves gameBg" style="background-image: url('assets/9_church.png.gif'); background-size: cover">
+</div>
+
+<% 
+$(function () {
+    mainScript.addArrow("down", "garden3_house2_2");
 });
 %>
 

@@ -39,7 +39,8 @@ export function showDialogue(dialogueList: Array<Dialogue>, index: number = 0) {
     const dialoguePanel = getDialoguePanel();
     clearAndAddCloseButton(dialoguePanel);
 
-    const dialogueText = <p>{dialogue.text}</p>;
+    const dialogueText = document.createElement("p");
+    dialogueText.innerHTML = dialogue.text;
     dialoguePanel.append(dialogueText);
 
     dialoguePanel.append(<br />);
