@@ -63,13 +63,13 @@ $(function () {
     gate1.style.cursor = "pointer";
 
     if (!story.lilyPicked) {
-        mainScript.addNpc("assets/d_lily.gif", 20, 65, 30, "Lily", mainScript.dialogue.gateDialogue);
+        mainScript.addNpc("assets/d_benedykt.gif", 20, 65, 30, "Benedykt", mainScript.dialogue.gateDialogue);
 
         gate1.addEventListener("click", () => {
             mainScript.showDialogue(mainScript.dialogue.gate2)
         });
     } else {
-        mainScript.addNpc("assets/d_lily.gif", 20, 65, 30, "Lily", mainScript.dialogue.gateDialogue2);
+        mainScript.addNpc("assets/d_benedykt.gif", 20, 65, 30, "Benedykt", mainScript.dialogue.gateDialogue2);
 
         gate1.addEventListener("click", () => {
             mainScript.showDialogue(mainScript.dialogue.gate2b)
