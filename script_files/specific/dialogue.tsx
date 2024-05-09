@@ -106,19 +106,11 @@ export const dialogue: dialogueObject = {
             text: "Though I appear human, I am nothing of the sort. Merely an artificial soul, flickering through the digital aether."
         },
         {
-            text: "Though the others appear inhuman, they are more human than you might think.",
+            text: "The others here, however, are more human than you might think.",
         },
         {
-            text: "Life is full of contradictions, is it not?"
+            text: "Life is full of contradictions. How marvelous."
         },
-        {
-            text: "How marvelous."
-        }
-    ],
-    amalgamiaDialogueb: [
-        {
-            text: "I am no denizen. Simply a visitor, like you."
-        }
     ],
     amalgamiaDialogue2: [
         {
@@ -174,7 +166,43 @@ export const dialogue: dialogueObject = {
             text: "And it will be more beautiful than anything you can conceive.",
         },
     ],
-    miscDialogue2: [
+
+    // PALE FIRE - NABOKOV
+    miscDialogue2a: [
+        {
+            text: "<em>The following note is not an apology of suicide—it is the simple and sober description of a spiritual situation.</em>"
+        },
+        {
+            text: "<em>The more lucid and overwhelming one's belief in Providence, the greater the temptation to get it over with, this business of life, but the greater too one's fear of the terrible sin implicit in self-destruction. Let us first consider the temptation.</em>"
+        },
+        {
+            text: "<em>A serious conception of any form of afterlife inevitably and necessarily presupposes some degree of belief in Providence; and, conversely, deep Christian faith presupposes some belief in some sort of spiritual survival.</em>"
+        },
+        {
+            text: "<em>With this divine mist of utter dependence permeating one's being, no wonder one is tempted, no wonder one weighs on one's palm with a dreamy smile the compact firearm in its case of suede leather hardly bigger than a castlegate key or a boy's seamed purse.</em>",
+        },
+        {
+            text: "<em>No wonder one peers over the parapet into an inviting abyss.</em>"
+        },
+    ],
+    miscDialogue2b: [
+        {
+            text: "<em>Of the not very many ways known of shedding one's body, falling, falling, falling is the supreme method, but you have to select your sill or ledge very carefully so as not to hurt yourself or others.</em>"
+        },
+        {
+            text: "<em>Jumping from a high bridge is not recommended even if you cannot swim, for wind and water abound in weird contingencies.</em>"
+        },
+        {
+            text: "<em>Another popular take-off is a mountaintop with a sheer drop of say 500 meters but you must find it, because you will be surprised how easy it is to miscalculate your deflection offset, and have some hidden projection, some fool of a crag, rush forth to catch you, causing you to bounce off it into the brush, thwarted, mangled and unnecessarily alive.</em>"
+        },
+        {
+            text: "<em>The ideal drop is from an aircraft, your muscles relaxed, your pilot puzzled, your packed parachute shuffled off, cast off, shrugged off—farewell!</em>",
+        },
+        {
+            text: "<em>Down you go, but all the while you feel suspended and buoyed as you somersault in slow motion like a somnolent tumbler pigeon, and sprawl supine on the eiderdown of the air, or lazily turn to embrace your pillow, enjoying every last instant of soft, deep, death-padded life, with the earth's green seesaw now above, now below, and the voluptuous crucifixion, as you stretch yourself in the growing rush, in the nearing swish, and then your loved body's obliteration in the Lap of the Lord.</em>"
+        }
+    ],
+    miscDialogue2c: [
         {
             text: "<em>When the soul adores Him Who guides it through mortal life, when it distinguishes His sign at every turn of the trail, painted on the boulder and notched in the fir trunk, when every page in the book of one's personal fate bears His watermark, how can one doubt that He will also preserve us through all eternity?</em>"
         },
