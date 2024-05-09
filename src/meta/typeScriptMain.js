@@ -555,7 +555,7 @@ var mainScript = (() => {
         text: "You do know you are intruding...?"
       },
       {
-        text: "I seldom see your kind. To cross the rubicon is no light task."
+        text: "To cross the rubicon is no light task. I seldom see your kind."
       },
       {
         text: "Only the worthy are allowed beyond here."
@@ -622,6 +622,20 @@ var mainScript = (() => {
             nextPassage: null,
             callback: () => {
               story.showSnippet("garden2_center");
+            }
+          }
+        ]
+      }
+    ],
+    gate1_3: [
+      {
+        text: "I've been here more times than I can remember...",
+        playerOptions: [
+          {
+            text: "Enter",
+            nextPassage: null,
+            callback: () => {
+              story.showSnippet("garden3_center");
             }
           }
         ]

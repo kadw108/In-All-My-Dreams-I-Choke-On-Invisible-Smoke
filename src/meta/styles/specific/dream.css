@@ -33,6 +33,7 @@
     background-position-x: 100%;
 
     animation: shimmer 3s infinite linear;
+    z-index: 4;
 }
 @keyframes shimmer {
     to {
@@ -54,7 +55,7 @@
 
     animation: rainbow 2s infinite linear;
 
-    z-index: 4;
+    z-index: 3;
 }
 @keyframes rainbow {
     0% {

@@ -1,0 +1,27 @@
+<snippet tags="dream" name="garden3_house1_1">
+
+<div class="absoluteAlign bothHalves gameBg" style="background-image: url('assets/9_house1.png.gif'); background-size: cover">
+</div>
+
+<% 
+$(function () {
+    mainScript.addArrow("left", "garden3_house1_2");
+    mainScript.addArrow("right", "garden3_flower2");
+});
+%>
+
+</snippet>
+
+<snippet tags="dream" name="garden3_house1_2">
+
+<div class="absoluteAlign bothHalves gameBg" style="background-image: url('assets/9_house2.png.gif'); background-size: cover">
+</div>
+
+<% 
+$(function () {
+    mainScript.addArrow("right", "garden3_house1_1");
+    mainScript.addArrow("up", "garden3_house1_2", 60, 7);
+});
+%>
+
+</snippet>

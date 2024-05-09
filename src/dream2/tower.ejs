@@ -1,0 +1,26 @@
+<snippet tags="dream" name="garden3_tower_before">
+
+<div class="absoluteAlign bothHalves gameBg" style="background-image: url('assets/tower_before.gif'); background-size: cover">
+</div>
+
+<% 
+$(function () {
+    mainScript.addArrow("right", "garden3_tower");
+});
+%>
+
+</snippet>
+
+<snippet tags="dream" name="garden3_tower">
+
+<div class="absoluteAlign bothHalves gameBg" style="background-image: url('assets/tower1.gif'); background-size: cover">
+</div>
+
+<% 
+$(function () {
+    mainScript.addArrow("left", "garden3_tower_before");
+    mainScript.addArrow("up", "garden3_house1_2", 60, 7);
+});
+%>
+
+</snippet>
