@@ -1,5 +1,5 @@
 import { dialogueObject } from "./npcs";
-import { playCutscene } from "./utility";
+import { playCutscene, playCutsceneComplex } from "./utility";
 
 export const dialogue: dialogueObject = {
     treasureDialogue: [
@@ -167,13 +167,10 @@ export const dialogue: dialogueObject = {
         },
     ],
 
-    // PALE FIRE - NABOKOV
+    // PALE FIRE
     miscDialogue2a: [
         {
-            text: "<em>The following note is not an apology of suicide—it is the simple and sober description of a spiritual situation.</em>"
-        },
-        {
-            text: "<em>The more lucid and overwhelming one's belief in Providence, the greater the temptation to get it over with, this business of life, but the greater too one's fear of the terrible sin implicit in self-destruction. Let us first consider the temptation.</em>"
+            text: "<em>The more lucid and overwhelming one's belief in Providence, the greater the temptation to get it over with, this business of life, but the greater too one's fear of the terrible sin implicit in self-destruction.</em>",
         },
         {
             text: "<em>A serious conception of any form of afterlife inevitably and necessarily presupposes some degree of belief in Providence; and, conversely, deep Christian faith presupposes some belief in some sort of spiritual survival.</em>"
@@ -182,7 +179,16 @@ export const dialogue: dialogueObject = {
             text: "<em>With this divine mist of utter dependence permeating one's being, no wonder one is tempted, no wonder one weighs on one's palm with a dreamy smile the compact firearm in its case of suede leather hardly bigger than a castlegate key or a boy's seamed purse.</em>",
         },
         {
-            text: "<em>No wonder one peers over the parapet into an inviting abyss.</em>"
+            text: "<em>No wonder one peers over the parapet into an inviting abyss.</em>",
+            playerOptions: [{ text: "OFFER", nextPassage: null, callback: () => {
+                playCutscene("assets/cutscene_deer_left.gif", 7000);
+
+                // @ts-expect-error (for story)
+                story.leftDeerOffer = true;
+
+                // @ts-expect-error (for story)
+                story.myInventory.addItem({ name: "blood_left", iconSrc: "assets/item2.png" });
+            }}],
         },
     ],
     miscDialogue2b: [
@@ -233,7 +239,18 @@ export const dialogue: dialogueObject = {
             text: "<em>So not only is the life of each individual person doomed; the entire human race is doomed.</em>",
         },
         {
-            text: "<em>There is no escape.</em>"
+            text: "<em>There is no escape.</em>",
+            playerOptions: [{ text: "OFFER", nextPassage: null, callback: () => {
+                playCutscene("assets/cutscene_deer_right.gif", 7000);
+
+                // @ts-expect-error (for story)
+                story.myInventory.addItem({ name: "blood_right", iconSrc: "assets/item2.png" });
+            }}],
+        }
+    ],
+    miscDialogue3b: [
+        {
+            text: "<em>There is no hope.</em>"
         }
     ],
 
@@ -375,9 +392,6 @@ export const dialogue: dialogueObject = {
                         story.myInventory.addItem({ name: "lily", iconSrc: "assets/item1.gif" });
 
                         // @ts-expect-error (for story)
-                        story.myInventory.addInventoryPanel();
-
-                        // @ts-expect-error (for story)
                         story.lilyPicked = true;
                     },
                 },
@@ -385,4 +399,29 @@ export const dialogue: dialogueObject = {
             ],
         },
     ],
+
+    field: [
+        {
+            text: "A place to rest."
+        },
+        {
+            text: "Not ready yet."
+        }
+    ],
+    field2: [
+        {
+            text: "A place of infinite peace.",
+            playerOptions: [
+                { text: "Rest", nextPassage: null, callback: () => {
+                    // @ts-expect-error (for story)
+                    story.myInventory.clear();
+
+                    playCutsceneComplex(["assets/cutscene_cover.gif", "assets/cutscene_cover_end.gif"], [6000, 8000], true, () => {
+                        // @ts-expect-error (for story)
+                        story.showSnippet("musicB_transition");
+                    });
+                } },
+            ],
+        }
+    ]
 };

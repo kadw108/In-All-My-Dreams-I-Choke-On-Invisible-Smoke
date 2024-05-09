@@ -66,12 +66,15 @@ export function addArrow(direction: string, destination: string, top: number | u
     container.append(arrow);
 }
 
-export function playCutscene(gifSrc: string, gifMilliseconds: number) {
+export function playCutscene(gifSrc: string, gifMilliseconds: number, big = false) {
     const cutsceneDiv = (
         <div className="absoluteAlign blackBg cutscenePanel">
             <img src={gifSrc} />
         </div>
     );
+    if (big) {
+        cutsceneDiv.classList.add("bigCutscenePanel");
+    }
 
     const screenCover = document.getElementById("screenCover");
     screenCover.style.display = "block";
@@ -86,3 +89,63 @@ export function playCutscene(gifSrc: string, gifMilliseconds: number) {
         });
     }, gifMilliseconds);
 }
+
+export function playCutsceneComplex(imgSrcList: Array<string>, millisecondList: Array<number>, big = false, callbackAfterDone = null) {
+    if (imgSrcList.length !== millisecondList.length) {
+        console.error("playCutsceneComplex: arrays not same length");
+        console.error(imgSrcList);
+        console.error(millisecondList);
+        return;
+    }
+
+    const cutsceneDiv = (
+        <div className="absoluteAlign blackBg cutscenePanel">
+        </div>
+    );
+    if (big) {
+        cutsceneDiv.classList.add("bigCutscenePanel");
+    }
+
+    const screenCover = document.getElementById("screenCover");
+    screenCover.style.display = "block";
+
+    const container = document.getElementById("iff-snippet");
+    container.append(cutsceneDiv);
+
+    const timeoutFunctionList: Array<Function> = [];
+
+    function generateShowCutsceneFunction(i: number) {
+        return () => {
+            cutsceneDiv.innerHTML = "";
+            const image1 = <img src={imgSrcList[i]}/>;
+            cutsceneDiv.append(image1);
+
+            setTimeout(() => {
+                if (i < imgSrcList.length - 1) {
+                    const next = <button type="button" className="nextButton">⮕</button>;
+                    next.addEventListener("click", () => {
+                        timeoutFunctionList[i + 1]();
+                    });
+                    cutsceneDiv.append(next);
+                }
+                else {
+                    const closeButton = addCloseButton(cutsceneDiv);
+                    closeButton.addEventListener("click", () => {
+                        screenCover.style.display = "none";
+
+                        if (callbackAfterDone !== null) {
+                            callbackAfterDone();
+                        }
+                    });
+                }
+            }, millisecondList[i]);
+        }
+    }
+
+    for (let i = 0; i < imgSrcList.length; i++) {
+        timeoutFunctionList.push(generateShowCutsceneFunction(i));
+    }
+
+    timeoutFunctionList[0]();
+}
+

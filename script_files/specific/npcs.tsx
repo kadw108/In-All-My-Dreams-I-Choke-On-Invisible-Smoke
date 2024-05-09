@@ -15,7 +15,7 @@ export type dialogueObject = { [id: string]: Array<Dialogue> };
 export function addNpc(src: string, top: number, left: number, width: number, name: string|null, dialogueList: Array<Dialogue>): void {
     const container = document.getElementById("iff-snippet");
 
-    let npc;
+    let npc: HTMLElement;
     if (name !== null && name !== "") {
         npc = <img className="npc" src={src} id={name} alt={name}></img>;
     } else {
@@ -25,6 +25,23 @@ export function addNpc(src: string, top: number, left: number, width: number, na
     npc.style.top = top + "%";
     npc.style.left = left + "%";
     npc.style.width = width + "%";
+
+    npc.addEventListener("click", () => {
+        showDialogue(dialogueList);
+    });
+
+    container.append(npc);
+}
+
+export function addInteractable(top: number, left: number, bottom: number, right: number, dialogueList: Array<Dialogue>): void {
+    const container = document.getElementById("iff-snippet");
+
+    let npc = <div className="interactable"></div>;
+
+    npc.style.top = top + "%";
+    npc.style.left = left + "%";
+    npc.style.bottom = bottom + "%";
+    npc.style.right = right + "%";
 
     npc.addEventListener("click", () => {
         showDialogue(dialogueList);

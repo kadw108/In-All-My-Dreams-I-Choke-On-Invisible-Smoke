@@ -1,11 +1,18 @@
 <snippet tags="dream" name="garden3_field">
 
-<div class="absoluteAlign bothHalves gameBg" style="background-image: url('assets/field.gif'); background-size: cover">
+<div class="absoluteAlign bothHalves gameBg" style="background-image: url('assets/field.gif'); background-size: cover;filter: saturate(0.7) hue-rotate(35deg);">
 </div>
 
 <% 
 $(function () {
     mainScript.addArrow("down", "garden3_centerupupup");
+
+    if (story.myInventory.checkHasItem("blood_left") && story.myInventory.checkHasItem("blood_right")) {
+        mainScript.addInteractable(0, 0, 0, 0, mainScript.dialogue.field2);
+    }
+    else {
+        mainScript.addInteractable(0, 0, 0, 0, mainScript.dialogue.field1);
+    }
 });
 %>
 

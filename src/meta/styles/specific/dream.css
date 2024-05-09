@@ -8,6 +8,11 @@
     z-index: 5;
 }
 
+.interactable {
+    cursor: pointer;
+    z-index: 4;
+}
+
 .arrow {
     width: 4%;
 }
@@ -35,7 +40,7 @@
     background-position-x: 100%;
 
     animation: shimmer 3s infinite linear;
-    z-index: 4;
+    z-index: 3;
 }
 @keyframes shimmer {
     to {
@@ -57,7 +62,7 @@
 
     animation: rainbow 2s infinite linear;
 
-    z-index: 3;
+    z-index: 2;
 }
 @keyframes rainbow {
     0% {

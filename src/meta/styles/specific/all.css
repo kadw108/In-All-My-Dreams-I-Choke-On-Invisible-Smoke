@@ -18,7 +18,7 @@
     height: 175px;
     margin: auto;
     padding: 0px;
-    overflow: hidden;
+    overflow: visible;
 
     border-image: url("assets/black1.gif");
     border-color: #222;
@@ -33,4 +33,24 @@ div.cutscenePanel > img {
 }
 div.cutscenePanel > .closeButton {
     position: absolute;
+}
+#iff-snippet div.bigCutscenePanel {
+    width: 250px;
+    height: 250px;
+}
+
+.nextButton {
+    border: 1px solid #777777;
+    padding: 3px;
+    background-color: #000000;
+    font-size: 20px;
+    padding: 0px 4px 0px 4px;
+    border-radius: 10px;
+}
+.nextButton:hover {
+    background-color: #333333;
+}
+
+#inventory > img {
+    width: 30px;
 }

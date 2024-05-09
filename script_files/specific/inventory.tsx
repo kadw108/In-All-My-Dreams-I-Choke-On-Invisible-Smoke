@@ -14,6 +14,7 @@ export class Inventory {
 
     addItem(item: Item) {
         this.items.push(item);
+        this.updatePanel();
     }
 
     removeItem(name: string) {
@@ -22,6 +23,12 @@ export class Inventory {
                 this.items.splice(i, 1);
             }
         }
+        this.updatePanel();
+    }
+
+    clear() {
+        this.items = [];
+        this.updatePanel();
     }
 
     checkHasItem(name: string) {
@@ -35,11 +42,22 @@ export class Inventory {
 
     addInventoryPanel() {
         const inventoryDiv = <div id="inventory"></div>;
-        for (const item of this.items) {
-            inventoryDiv.append(<img src={item.iconSrc} />);
-        }
 
         const iffSnippet = document.getElementById("iff-snippet");
         iffSnippet.append(inventoryDiv);
+        return inventoryDiv
+    }
+
+    updatePanel() {
+        let inventoryDiv = document.getElementById("inventory");
+
+        if (inventoryDiv === null) {
+            inventoryDiv = this.addInventoryPanel();
+        }
+
+        inventoryDiv.innerHTML = "";
+        for (const item of this.items) {
+            inventoryDiv.append(<img src={item.iconSrc} />);
+        }
     }
 }
