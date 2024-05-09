@@ -1,0 +1,40 @@
+<snippet tags="dream" name="garden3_eden0">
+
+<div class="absoluteAlign bothHalves gameBg" style="background-image: url('assets/eden0b.gif'); background-size: cover">
+</div>
+
+<% 
+$(function () {
+    mainScript.addArrow("left", "garden3_centerupup");
+    mainScript.addArrow("right", "garden3_eden1");
+});
+%>
+
+</snippet>
+
+<snippet tags="dream" name="garden3_eden1">
+
+<div class="absoluteAlign bothHalves gameBg" style="background-image: url('assets/eden1.gif'); background-size: 120%; background-position-x: right">
+</div>
+
+<% 
+$(function () {
+    mainScript.addArrow("left", "garden3_eden0");
+    mainScript.addArrow("right", "garden3_eden2");
+});
+%>
+
+</snippet>
+
+<snippet tags="dream" name="garden3_eden2">
+
+<div class="absoluteAlign bothHalves gameBg" style="background-image: url('assets/eden2b.gif'); background-size: 120%;background-position-y: bottom"></div>
+
+<% 
+$(function () {
+    mainScript.addArrow("left", "garden3_eden1", 55, 1);
+});
+%>
+
+
+</snippet>

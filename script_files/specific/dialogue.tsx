@@ -241,6 +241,24 @@ export const dialogue: dialogueObject = {
             ],
         },
     ],
+    gate2c: [
+        {
+            text: "...",
+        },
+        {
+            text: "The music is growing louder.",
+            playerOptions: [
+                {
+                    text: "Enter",
+                    nextPassage: null,
+                    callback: () => {
+                        // @ts-expect-error (for story)
+                        story.showSnippet("garden3_tower_before");
+                    },
+                },
+            ],
+        },
+    ],
 
     lily1: [
         {

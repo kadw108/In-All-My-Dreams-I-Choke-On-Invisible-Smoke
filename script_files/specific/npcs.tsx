@@ -12,9 +12,15 @@ type Dialogue = {
 };
 export type dialogueObject = { [id: string]: Array<Dialogue> };
 
-export function addNpc(src: string, top: number, left: number, width: number, name: string, dialogueList: Array<Dialogue>): void {
+export function addNpc(src: string, top: number, left: number, width: number, name: string|null, dialogueList: Array<Dialogue>): void {
     const container = document.getElementById("iff-snippet");
-    const npc = <img className="npc" src={src} id={name} alt={name}></img>;
+
+    let npc;
+    if (name !== null && name !== "") {
+        npc = <img className="npc" src={src} id={name} alt={name}></img>;
+    } else {
+        npc = <img className="npc" src={src}></img>;
+    }
 
     npc.style.top = top + "%";
     npc.style.left = left + "%";

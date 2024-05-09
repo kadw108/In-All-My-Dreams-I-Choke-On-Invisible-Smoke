@@ -13,13 +13,42 @@ $(function () {
 
 <snippet tags="dream" name="garden3_tower">
 
-<div class="absoluteAlign bothHalves gameBg" style="background-image: url('assets/tower1.gif'); background-size: cover">
+<div class="absoluteAlign bothHalves gameBg" style="background-image: url('assets/9_tower.png.gif'); background-size: cover">
 </div>
 
 <% 
 $(function () {
-    mainScript.addArrow("left", "garden3_tower_before");
-    mainScript.addArrow("up", "garden3_house1_2", 60, 7);
+    mainScript.addArrow("left", "garden3_tower_before", 92, 1);
+    mainScript.addArrow("up", "garden3_tower2", 83, 58);
+});
+%>
+
+</snippet>
+
+
+<snippet tags="dream" name="garden3_tower2">
+
+<div class="absoluteAlign bothHalves gameBg" style="background-image: url('assets/9_tower_zoom1.png.gif'); background-size: cover">
+</div>
+
+<% 
+$(function () {
+    mainScript.addArrow("up", "garden3_tower3", 83, 58);
+    mainScript.addArrow("down", "garden3_tower", 92, 35);
+});
+%>
+
+</snippet>
+
+<snippet tags="dream" name="garden3_tower3">
+
+<div class="absoluteAlign bothHalves gameBg" style="background-image: url('assets/9_tower_zoom2.png.gif'); background-size: cover">
+</div>
+
+<% 
+$(function () {
+    mainScript.addArrow("up", "garden3_tower3", 73, 70);
+    mainScript.addArrow("down", "garden3_tower2", 92, 28);
 });
 %>
 

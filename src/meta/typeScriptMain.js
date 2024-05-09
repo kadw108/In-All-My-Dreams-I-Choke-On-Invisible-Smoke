@@ -382,7 +382,12 @@ var mainScript = (() => {
   // specific/npcs.tsx
   function addNpc(src, top, left, width, name, dialogueList) {
     const container = document.getElementById("iff-snippet");
-    const npc = /* @__PURE__ */ h("img", { className: "npc", src, id: name, alt: name });
+    let npc;
+    if (name !== null && name !== "") {
+      npc = /* @__PURE__ */ h("img", { className: "npc", src, id: name, alt: name });
+    } else {
+      npc = /* @__PURE__ */ h("img", { className: "npc", src });
+    }
     npc.style.top = top + "%";
     npc.style.left = left + "%";
     npc.style.width = width + "%";
@@ -672,6 +677,23 @@ var mainScript = (() => {
             callback: () => {
               story.myInventory.removeItem("lily");
               story.showSnippet("homeB_transition");
+            }
+          }
+        ]
+      }
+    ],
+    gate2c: [
+      {
+        text: "..."
+      },
+      {
+        text: "The music is growing louder.",
+        playerOptions: [
+          {
+            text: "Enter",
+            nextPassage: null,
+            callback: () => {
+              story.showSnippet("garden3_tower_before");
             }
           }
         ]
