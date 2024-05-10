@@ -170,21 +170,24 @@ export const dialogue: dialogueObject = {
     // PALE FIRE
     miscDialogue2a: [
         {
-            text: "<em>The more lucid and overwhelming one's belief in Providence, the greater the temptation to get it over with, this business of life, but the greater too one's fear of the terrible sin implicit in self-destruction.</em>",
+            text: "<em>The more lucid and overwhelming one's belief in Heaven, the greater the temptation to get it over with, this business of life.</em>",
         },
         {
-            text: "<em>A serious conception of any form of afterlife inevitably and necessarily presupposes some degree of belief in Providence; and, conversely, deep Christian faith presupposes some belief in some sort of spiritual survival.</em>"
+            text: "<em>Of the not very many ways known of shedding one's body, falling, falling, falling is the supreme method, but you have to select your sill or ledge very carefully so as not to hurt yourself or others.</em>"
         },
         {
-            text: "<em>With this divine mist of utter dependence permeating one's being, no wonder one is tempted, no wonder one weighs on one's palm with a dreamy smile the compact firearm in its case of suede leather hardly bigger than a castlegate key or a boy's seamed purse.</em>",
+            text: "<em>The ideal drop is from an aircraft, your muscles relaxed, your pilot puzzled, your packed parachute shuffled off, cast off, shrugged off—farewell!</em>",
         },
         {
-            text: "<em>No wonder one peers over the parapet into an inviting abyss.</em>",
+            text: "<em>Down you go, but all the while you feel suspended and buoyed as you somersault in slow motion like a somnolent tumbler pigeon, and sprawl supine on the eiderdown of the air...</em>"
+        },
+        {
+            text: "<em>...Or lazily turn to embrace your pillow, enjoying every last instant of soft, deep, death-padded life, with the earth's green seesaw now above, now below, and the voluptuous crucifixion, as you stretch yourself in the growing rush, in the nearing swish...</em>"
+        },
+        {
+            text: "<em>...And then your loved body's obliteration in the Lap of the Lord.</em>",
             playerOptions: [{ text: "OFFER", nextPassage: null, callback: () => {
                 playCutscene("assets/cutscene_deer_left.gif", 7000);
-
-                // @ts-expect-error (for story)
-                story.leftDeerOffer = true;
 
                 // @ts-expect-error (for story)
                 story.myInventory.addItem({ name: "blood_left", iconSrc: "assets/item2.png" });
@@ -192,23 +195,6 @@ export const dialogue: dialogueObject = {
         },
     ],
     miscDialogue2b: [
-        {
-            text: "<em>Of the not very many ways known of shedding one's body, falling, falling, falling is the supreme method, but you have to select your sill or ledge very carefully so as not to hurt yourself or others.</em>"
-        },
-        {
-            text: "<em>Jumping from a high bridge is not recommended even if you cannot swim, for wind and water abound in weird contingencies.</em>"
-        },
-        {
-            text: "<em>Another popular take-off is a mountaintop with a sheer drop of say 500 meters but you must find it, because you will be surprised how easy it is to miscalculate your deflection offset, and have some hidden projection, some fool of a crag, rush forth to catch you, causing you to bounce off it into the brush, thwarted, mangled and unnecessarily alive.</em>"
-        },
-        {
-            text: "<em>The ideal drop is from an aircraft, your muscles relaxed, your pilot puzzled, your packed parachute shuffled off, cast off, shrugged off—farewell!</em>",
-        },
-        {
-            text: "<em>Down you go, but all the while you feel suspended and buoyed as you somersault in slow motion like a somnolent tumbler pigeon, and sprawl supine on the eiderdown of the air, or lazily turn to embrace your pillow, enjoying every last instant of soft, deep, death-padded life, with the earth's green seesaw now above, now below, and the voluptuous crucifixion, as you stretch yourself in the growing rush, in the nearing swish, and then your loved body's obliteration in the Lap of the Lord.</em>"
-        }
-    ],
-    miscDialogue2c: [
         {
             text: "<em>When the soul adores Him Who guides it through mortal life, when it distinguishes His sign at every turn of the trail, painted on the boulder and notched in the fir trunk, when every page in the book of one's personal fate bears His watermark, how can one doubt that He will also preserve us through all eternity?</em>"
         },
@@ -400,9 +386,12 @@ export const dialogue: dialogueObject = {
         },
     ],
 
-    field: [
+    field1: [
         {
-            text: "A place to rest."
+            text: "...A place to rest..."
+        },
+        {
+            text: "..."
         },
         {
             text: "Not ready yet."
