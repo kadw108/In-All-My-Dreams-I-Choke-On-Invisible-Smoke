@@ -103,32 +103,32 @@ export const dialogue: dialogueObject = {
 
     amalgamiaDialogue: [
         {
-            text: "Though I appear human, I am nothing of the sort. Merely an artificial soul, flickering through the digital aether."
+            text: "Though I appear human, I am nothing of the sort. Merely an artificial soul, flickering through the digital aether.",
         },
         {
             text: "The others here, however, are more human than you might think.",
         },
         {
-            text: "Life is full of contradictions. How marvelous."
+            text: "Life is full of contradictions. How marvelous.",
         },
     ],
     amalgamiaDialogue2: [
         {
-            text: "I am not a denizen of this world, but I pass freely through the barriers, owing to my nature."
+            text: "I am not a denizen of this world, but I pass freely through the barriers, owing to my nature.",
         },
         {
-            text: "The internet is a place where dreams may come to fruition. It is ethereal and all-encompassing... at least where you and I are from..."
+            text: "The internet is a place where dreams may come to fruition. It is ethereal and all-encompassing... at least where you and I are from...",
         },
         {
-            text: "So it should be no surprise that I can slip so easily into this realm."
-        }
+            text: "So it should be no surprise that I can slip so easily into this realm.",
+        },
     ],
     amalgamiaDialogue3: [
         {
-            text: "Ah, but do you even know who I am?"
+            text: "Ah, but do you even know who I am?",
         },
         {
-            text: "Perhaps we have met in a previous life. Perhaps not..."
+            text: "Perhaps we have met in a previous life. Perhaps not...",
         },
     ],
 
@@ -173,71 +173,96 @@ export const dialogue: dialogueObject = {
             text: "<em>The more lucid and overwhelming one's belief in Heaven, the greater the temptation to get it over with, this business of life.</em>",
         },
         {
-            text: "<em>Of the not very many ways known of shedding one's body, falling, falling, falling is the supreme method, but you have to select your sill or ledge very carefully so as not to hurt yourself or others.</em>"
+            text: "<em>Of the not very many ways known of shedding one's body, falling, falling, falling is the supreme method, but you have to select your sill or ledge very carefully so as not to hurt yourself or others.</em>",
         },
         {
             text: "<em>The ideal drop is from an aircraft, your muscles relaxed, your pilot puzzled, your packed parachute shuffled off, cast off, shrugged off—farewell!</em>",
         },
         {
-            text: "<em>Down you go, but all the while you feel suspended and buoyed as you somersault in slow motion like a somnolent tumbler pigeon, and sprawl supine on the eiderdown of the air...</em>"
+            text: "<em>Down you go, but all the while you feel suspended and buoyed as you somersault in slow motion like a somnolent tumbler pigeon, and sprawl supine on the eiderdown of the air...</em>",
         },
         {
-            text: "<em>...Or lazily turn to embrace your pillow, enjoying every last instant of soft, deep, death-padded life, with the earth's green seesaw now above, now below, and the voluptuous crucifixion, as you stretch yourself in the growing rush, in the nearing swish...</em>"
+            text: "<em>...Or lazily turn to embrace your pillow, enjoying every last instant of soft, deep, death-padded life, with the earth's green seesaw now above, now below, and the voluptuous crucifixion, as you stretch yourself in the growing rush, in the nearing swish...</em>",
         },
         {
             text: "<em>...And then your loved body's obliteration in the Lap of the Lord.</em>",
-            playerOptions: [{ text: "OFFER", nextPassage: null, callback: () => {
-                playCutscene("assets/cutscene_deer_left.gif", 6000);
+            playerOptions: [
+                {
+                    text: "OFFER",
+                    nextPassage: null,
+                    callback: () => {
+                        playCutscene("assets/cutscene_deer_left.gif", 6000);
 
-                // @ts-expect-error (for story)
-                story.myInventory.addItem({ name: "blood_left", iconSrc: "assets/item2.png" });
-            }}],
+                        // @ts-expect-error (for story)
+                        story.myInventory.addItem({ name: "blood_left", iconSrc: "assets/item2.png" });
+                    },
+                },
+            ],
         },
     ],
     miscDialogue2b: [
         {
-            text: "<em>When the soul adores Him Who guides it through mortal life, when it distinguishes His sign at every turn of the trail, painted on the boulder and notched in the fir trunk, when every page in the book of one's personal fate bears His watermark, how can one doubt that He will also preserve us through all eternity?</em>"
+            text: "<em>When the soul adores Him Who guides it through mortal life, when it distinguishes His sign at every turn of the trail, painted on the boulder and notched in the fir trunk, when every page in the book of one's personal fate bears His watermark, how can one doubt that He will also preserve us through all eternity?</em>",
         },
         {
-            text: "<em>So what can stop one from effecting the transition? What can help us to resist the intolerable temptation? What can prevent us from yielding to the burning desire for merging in God?</em>"
+            text: "<em>So what can stop one from effecting the transition? What can help us to resist the intolerable temptation? What can prevent us from yielding to the burning desire for merging in God?</em>",
         },
         {
-            text: "<em>We who burrow in filth every day may be forgiven perhaps the one sin that ends all sins.</em>"
-        }
+            text: "<em>We who burrow in filth every day may be forgiven perhaps the one sin that ends all sins.</em>",
+        },
     ],
     miscDialogue3: [
         {
             text: "<em>If God does not exist, then both man and the universe are inevitably doomed to death.</em>",
         },
         {
-            text: "<em>Man, like all biological organisms, must die. With no hope of immortality, man's life leads only to the grave. His life is but a spark in the infinite blackness, a spark that appears, flickers, and dies forever.</em>"
+            text: "<em>Man, like all biological organisms, must die. With no hope of immortality, man's life leads only to the grave. His life is but a spark in the infinite blackness, a spark that appears, flickers, and dies forever.</em>",
         },
         {
-            text: "<em>Scientists tell us that the universe is expanding, and everything in it is growing farther and farther apart.</em>"
+            text: "<em>Scientists tell us that the universe is expanding, and everything in it is growing farther and farther apart.</em>",
         },
         {
             text: "<em>As it does so, it grows colder and colder, and its energy is used up. Eventually all the stars will burn out and all matter will collapse into dead stars and black holes.</em>",
         },
         {
-            text: "<em>There will be no light at all; there will be no heat; there will be no life; only the corpses of dead stars and galaxies, ever expanding into the endless darkness and the cold recesses of space—a universe in ruins.</em>"
+            text: "<em>There will be no light at all; there will be no heat; there will be no life; only the corpses of dead stars and galaxies, ever expanding into the endless darkness and the cold recesses of space—a universe in ruins.</em>",
         },
         {
             text: "<em>So not only is the life of each individual person doomed; the entire human race is doomed.</em>",
         },
         {
             text: "<em>There is no escape.</em>",
-            playerOptions: [{ text: "OFFER", nextPassage: null, callback: () => {
-                playCutscene("assets/cutscene_deer_right.gif", 6000);
+            playerOptions: [
+                {
+                    text: "OFFER",
+                    nextPassage: null,
+                    callback: () => {
+                        playCutscene("assets/cutscene_deer_right.gif", 6000);
 
-                // @ts-expect-error (for story)
-                story.myInventory.addItem({ name: "blood_right", iconSrc: "assets/item2.png" });
-            }}],
-        }
+                        // @ts-expect-error (for story)
+                        story.myInventory.addItem({ name: "blood_right", iconSrc: "assets/item2.png" });
+                    },
+                },
+            ],
+        },
     ],
     miscDialogue3b: [
         {
-            text: "<em>There is no hope.</em>"
-        }
+            text: "<em>There is no hope.</em>",
+        },
+    ],
+
+    questionA: [
+        {
+            text: "Do you love your family?",
+            playerOptions: [
+                { text: "Yes", nextPassage: 1 },
+                { text: "No", nextPassage: 1 },
+            ],
+        },
+        {
+            text: "You may proceed.",
+        },
     ],
 
     gate1: [
@@ -305,6 +330,21 @@ export const dialogue: dialogueObject = {
             ],
         },
     ],
+    gate1_4: [
+        {
+            text: "This is right. This is how things should be.",
+            playerOptions: [
+                {
+                    text: "Enter",
+                    nextPassage: null,
+                    callback: () => {
+                        // @ts-expect-error (for story)
+                        story.showSnippet("garden4_center");
+                    },
+                },
+            ],
+        },
+    ],
 
     gate2: [
         {
@@ -345,6 +385,11 @@ export const dialogue: dialogueObject = {
             ],
         },
     ],
+    gate2d: [
+        {
+            text: "...It is not time yet.",
+        },
+    ],
     gate2c: [
         {
             text: "...",
@@ -358,6 +403,24 @@ export const dialogue: dialogueObject = {
                     callback: () => {
                         // @ts-expect-error (for story)
                         story.showSnippet("garden3_field");
+                    },
+                },
+            ],
+        },
+    ],
+    gate2e: [
+        {
+            text: "...",
+        },
+        {
+            text: "I can hear the music.",
+            playerOptions: [
+                {
+                    text: "Enter",
+                    nextPassage: null,
+                    callback: () => {
+                        // @ts-expect-error (for story)
+                        story.showSnippet("garden4_tower_before");
                     },
                 },
             ],
@@ -383,31 +446,49 @@ export const dialogue: dialogueObject = {
         },
     ],
 
-    field1: [
-        {
-            text: "...A place to rest..."
-        },
-        {
-            text: "..."
-        },
-        {
-            text: "Not ready yet."
-        }
-    ],
     field2: [
         {
             text: "A place of infinite peace.",
             playerOptions: [
-                { text: "Rest", nextPassage: null, callback: () => {
-                    // @ts-expect-error (for story)
-                    story.myInventory.clear();
+                {
+                    text: "Rest",
+                    nextPassage: null,
+                    callback: () => {
+                        // @ts-expect-error (for story)
+                        story.myInventory.clear();
 
-                    playCutsceneComplex(["assets/cutscene_cover.gif", "assets/cutscene_cover_end.gif"], [6000, 8000], true, () => {
+                        playCutsceneComplex(["assets/cutscene_cover.gif", "assets/cutscene_cover_end.gif"], [6000, 8000], true, () => {
+                            // @ts-expect-error (for story)
+                            story.showSnippet("lifeA_transition");
+                        });
+                    },
+                },
+            ],
+        },
+    ],
+
+    prism: [
+        {
+            text: "Hey...",
+        },
+        {
+            text: "Why are you still there?",
+        },
+        {
+            text: "What can they even offer you?",
+        },
+        {
+            text: "You know as well as I do where you belong.",
+            playerOptions: [
+                {
+                    text: "I know.",
+                    nextPassage: null,
+                    callback: () => {
                         // @ts-expect-error (for story)
                         story.showSnippet("musicB_transition");
-                    });
-                } },
+                    },
+                },
             ],
-        }
-    ]
+        },
+    ],
 };

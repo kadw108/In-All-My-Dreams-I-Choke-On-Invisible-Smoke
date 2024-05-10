@@ -1,0 +1,61 @@
+<snippet tags="dream" name="garden4_center">
+
+<div class="absoluteAlign bothHalves gameBg" style="background-image: url('assets/9_center1.png.gif'); background-size: cover">
+</div>
+
+<% 
+$(function () {
+    mainScript.addArrow("up", "garden4_centerup");
+});
+%>
+
+</snippet>
+
+<snippet tags="dream" name="garden4_centerup">
+
+<div class="absoluteAlign bothHalves gameBg" style="background-image: url('assets/9_center2.png.gif'); background-size: cover">
+</div>
+
+<% 
+$(function () {
+    mainScript.addArrow("up", "garden4_centerupup");
+    mainScript.addArrow("down", "garden4_center");
+});
+%>
+
+</snippet>
+
+<snippet tags="dream" name="garden4_centerupup">
+
+<div class="absoluteAlign bothHalves gameBg" style="background-image: url('assets/9_center1.png.gif'); background-size: cover">
+</div>
+
+<% 
+$(function () {
+    mainScript.addArrow("up", "garden4_centerupupup");
+    mainScript.addArrow("down", "garden4_centerup");
+});
+%>
+
+</snippet>
+
+<snippet tags="dream" name="garden4_centerupupup">
+
+<div class="absoluteAlign bothHalves gameBg" style="background-image: url('assets/garden_center.gif'); background-size: cover; animation: blur 0.25s infinite alternate ease">
+</div>
+
+<div id="gate1" class="absoluteAlign bothHalves"></div>
+
+<% 
+$(function () {
+    mainScript.addArrow("down", "garden4_centerupup");
+
+    const gate1 = document.getElementById("gate1");
+    gate1.style.cursor = "pointer";
+    gate1.addEventListener("click", () => {
+        mainScript.showDialogue(mainScript.dialogue.gate2e)
+    });
+});
+%>
+
+</snippet>

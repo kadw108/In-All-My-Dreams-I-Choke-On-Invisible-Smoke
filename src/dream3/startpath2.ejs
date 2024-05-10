@@ -1,0 +1,49 @@
+<snippet name="dreamtransition4">
+    <div style="text-align: center">
+        <p>[[TODO|garden4_startpath]]</p>
+    </div>
+</snippet>
+
+<snippet tags="dream" name="garden4_startpath">
+<div class="absoluteAlign bothHalves gameBg" style="background-image: url('assets/9_path1.png.gif'); background-size: cover">
+</div>
+
+<% 
+$(function () {
+    mainScript.addArrow("up", "garden4_startpath2", 59, 41);
+});
+%>
+</snippet>
+
+<snippet tags="dream" name="garden4_startpath2">
+<div class="absoluteAlign bothHalves gameBg" style="background-image: url('assets/9_path2.png.gif'); background-size: cover">
+</div>
+
+<% 
+$(function () {
+    mainScript.addArrow("up", "garden4_gate1", 59, 42);
+    mainScript.addArrow("down", "garden4_startpath");
+});
+%>
+</snippet>
+
+<snippet tags="dream" name="garden4_gate1">
+
+<div class="absoluteAlign bothHalves gameBg" style="background-image: url('assets/9_gate1.png.gif'); background-size: cover; animation: blur 0.75s infinite alternate ease"></div>
+
+<div id="gate1" class="absoluteAlign bothHalves"></div>
+<div id="gate2" class="absoluteAlign bothHalves"></div>
+
+<% 
+$(function () {
+    mainScript.addArrow("down", "garden4_startpath6", 92, 40);
+
+    const gate1 = document.getElementById("gate1");
+    gate1.style.cursor = "pointer";
+    gate1.addEventListener("click", () => {
+        mainScript.showDialogue(mainScript.dialogue.gate1_4)
+    });
+});
+%>
+
+</snippet>

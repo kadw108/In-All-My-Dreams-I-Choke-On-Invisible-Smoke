@@ -55,9 +55,17 @@ $(function () {
 
     const gate1 = document.getElementById("gate1");
     gate1.style.cursor = "pointer";
-    gate1.addEventListener("click", () => {
-        mainScript.showDialogue(mainScript.dialogue.gate2c)
-    });
+
+    if (story.myInventory.checkHasItem("blood_left") && story.myInventory.checkHasItem("blood_right")) {
+        gate1.addEventListener("click", () => {
+            mainScript.showDialogue(mainScript.dialogue.gate2c)
+        });
+    }
+    else {
+        gate1.addEventListener("click", () => {
+            mainScript.showDialogue(mainScript.dialogue.gate2d)
+        });
+    }
 });
 %>
 
