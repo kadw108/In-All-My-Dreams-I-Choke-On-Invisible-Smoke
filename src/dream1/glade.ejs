@@ -23,7 +23,7 @@ $(function () {
 $(function () {
     mainScript.addArrow("left", "garden2_glade0");
 
-    if (!story.lilyPicked) {
+    if (!story.myInventory.checkHasItem("lily")) {
         mainScript.addNpc("assets/d_tanqing.gif", 20, 30, 25, "Tanqing", mainScript.dialogue.flowerDialogue);
     } else {
         mainScript.addNpc("assets/d_tanqing.gif", 20, 30, 25, "Tanqing", mainScript.dialogue.flowerDialogue2);
@@ -56,7 +56,7 @@ $(function () {
 $(function () {
     mainScript.addArrow("left", "garden2_glade2");
 
-    if (!story.lilyPicked) {
+    if (!story.myInventory.checkHasItem("lily")) {
         mainScript.addNpc("assets/lily1.gif", 35, 20, 25, null, mainScript.dialogue.lily1);
     }
 });

@@ -1,8 +1,6 @@
 story.transitionMessage = null;
 story.myInventory = new mainScript.Inventory();
 
-story.lilyPicked = false;
-
 /* To preload images */
 /* From https://twinery.org/forum/discussion/8195/preloading-background-images-sugarcube-2-0-twine-2 */
 (function () {

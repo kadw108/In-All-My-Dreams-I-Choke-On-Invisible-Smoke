@@ -187,7 +187,7 @@ export const dialogue: dialogueObject = {
         {
             text: "<em>...And then your loved body's obliteration in the Lap of the Lord.</em>",
             playerOptions: [{ text: "OFFER", nextPassage: null, callback: () => {
-                playCutscene("assets/cutscene_deer_left.gif", 7000);
+                playCutscene("assets/cutscene_deer_left.gif", 6000);
 
                 // @ts-expect-error (for story)
                 story.myInventory.addItem({ name: "blood_left", iconSrc: "assets/item2.png" });
@@ -227,7 +227,7 @@ export const dialogue: dialogueObject = {
         {
             text: "<em>There is no escape.</em>",
             playerOptions: [{ text: "OFFER", nextPassage: null, callback: () => {
-                playCutscene("assets/cutscene_deer_right.gif", 7000);
+                playCutscene("assets/cutscene_deer_right.gif", 6000);
 
                 // @ts-expect-error (for story)
                 story.myInventory.addItem({ name: "blood_right", iconSrc: "assets/item2.png" });
@@ -373,12 +373,9 @@ export const dialogue: dialogueObject = {
                     nextPassage: null,
                     callback: () => {
                         playCutscene("assets/cutscene1_2.gif", 6500);
-                        document.getElementById("lily1").remove();
+                        document.getElementById("assets/lily1.gif").remove();
                         // @ts-expect-error (for story)
                         story.myInventory.addItem({ name: "lily", iconSrc: "assets/item1.gif" });
-
-                        // @ts-expect-error (for story)
-                        story.lilyPicked = true;
                     },
                 },
                 { text: "Don't.", nextPassage: null },

@@ -23,7 +23,7 @@ $(function () {
     mainScript.addArrow("up", "garden2_centerupup");
     mainScript.addArrow("down", "garden2_center");
 
-    if (!story.lilyPicked) {
+    if (!story.myInventory.checkHasItem("lily")) {
         mainScript.addNpc("assets/d_wesley.gif", 17, 32, 12, "Wesley", mainScript.dialogue.treasureDialogue);
     }
     else {
@@ -62,7 +62,7 @@ $(function () {
     const gate1 = document.getElementById("gate1");
     gate1.style.cursor = "pointer";
 
-    if (!story.lilyPicked) {
+    if (!story.myInventory.checkHasItem("lily")) {
         mainScript.addNpc("assets/d_benedykt.gif", 20, 65, 30, "Benedykt", mainScript.dialogue.gateDialogue);
 
         gate1.addEventListener("click", () => {

@@ -19,7 +19,7 @@ export function addNpc(src: string, top: number, left: number, width: number, na
     if (name !== null && name !== "") {
         npc = <img className="npc" src={src} id={name} alt={name}></img>;
     } else {
-        npc = <img className="npc" src={src}></img>;
+        npc = <img className="npc" src={src} id={src}></img>;
     }
 
     npc.style.top = top + "%";
