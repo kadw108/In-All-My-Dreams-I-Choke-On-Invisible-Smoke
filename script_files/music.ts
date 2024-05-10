@@ -5,7 +5,19 @@ function addMaxVolume(howl: Howl, maxVolume: number) {
     return howl;
 }
 
-const music0: Array<Howl> = [
+const dreamMusicA: Array<Howl> = [
+    addMaxVolume(
+        new Howl({
+            src: ["./assets/music/deuteronomy_-_evaporation_-_02_starboarding_ura_(w-_Darius).mp3"],
+            loop: true,
+
+            autoplay: false,
+            volume: 0,
+            html5: true,
+            preload: "metadata",
+        }),
+        0.2
+    ),
     addMaxVolume(
         new Howl({
             src: ["./assets/music/gusts_of_wind.mp3"],
@@ -16,7 +28,7 @@ const music0: Array<Howl> = [
             html5: true,
             preload: "metadata",
         }),
-        1.0
+        0.4
     ),
     addMaxVolume(
         new Howl({
@@ -28,15 +40,14 @@ const music0: Array<Howl> = [
             html5: true,
             preload: "metadata",
         }),
-        1.0
+        0.65
     ),
 ];
 
-const music2: Array<Howl> = [
+const dreamMusicB: Array<Howl> = [
     addMaxVolume(
         new Howl({
             src: ["./assets/music/deuteronomy_-_evaporation_-_02_starboarding_ura_(w-_Darius).mp3"],
-            // src: ["./assets/music/deuteronomy_-_evaporation_-_02_starboarding_ura_(w-_Darius).mp3", "./assets/music/deuteronomy_-_evaporation_-_02_starboarding_ura_(w-_Darius).ogg"],
             loop: true,
 
             autoplay: false,
@@ -44,7 +55,19 @@ const music2: Array<Howl> = [
             html5: true,
             preload: "metadata",
         }),
-        0.9
+        0.4
+    ),
+    addMaxVolume(
+        new Howl({
+            src: ["./assets/music/gusts_of_wind.mp3"],
+            loop: true,
+
+            autoplay: false,
+            volume: 0,
+            html5: true,
+            preload: "metadata",
+        }),
+        0.4
     ),
     addMaxVolume(
         new Howl({
@@ -56,15 +79,53 @@ const music2: Array<Howl> = [
             html5: true,
             preload: "metadata",
         }),
-        1.0
+        0.65
     ),
 ];
 
-const music1: Array<Howl> = [
+const dreamMusicC: Array<Howl> = [
     addMaxVolume(
         new Howl({
-            src: ["./assets/music/deuteronomy_-_evaporation_-_01_establishing_shot_ura.mp3"],
-            // src: ["./assets/music/deuteronomy_-_evaporation_-_01_establishing_shot_ura.mp3", "./assets/music/deuteronomy_-_evaporation_-_01_establishing_shot_ura.ogg"],
+            src: ["./assets/music/deuteronomy_-_evaporation_-_02_starboarding_ura_(w-_Darius).mp3"],
+            loop: true,
+
+            autoplay: false,
+            volume: 0,
+            html5: true,
+            preload: "metadata",
+        }),
+        0.7
+    ),
+    addMaxVolume(
+        new Howl({
+            src: ["./assets/music/gusts_of_wind.mp3"],
+            loop: true,
+
+            autoplay: false,
+            volume: 0,
+            html5: true,
+            preload: "metadata",
+        }),
+        0.4
+    ),
+    addMaxVolume(
+        new Howl({
+            src: ["./assets/music/birds_noises.mp3"],
+            loop: true,
+
+            autoplay: false,
+            volume: 0,
+            html5: true,
+            preload: "metadata",
+        }),
+        0.65
+    ),
+];
+
+const dreamMusicD: Array<Howl> = [
+    addMaxVolume(
+        new Howl({
+            src: ["./assets/music/deuteronomy_-_evaporation_-_02_starboarding_ura_(w-_Darius).mp3"],
             loop: true,
 
             autoplay: false,
@@ -74,9 +135,84 @@ const music1: Array<Howl> = [
         }),
         1.0
     ),
+    addMaxVolume(
+        new Howl({
+            src: ["./assets/music/gusts_of_wind.mp3"],
+            loop: true,
+
+            autoplay: false,
+            volume: 0,
+            html5: true,
+            preload: "metadata",
+        }),
+        0.4
+    ),
+    addMaxVolume(
+        new Howl({
+            src: ["./assets/music/birds_noises.mp3"],
+            loop: true,
+
+            autoplay: false,
+            volume: 0,
+            html5: true,
+            preload: "metadata",
+        }),
+        0.65
+    ),
 ];
 
-const music3: Array<Howl> = [
+const mixMusic: Array<Howl> = [
+    addMaxVolume(
+        new Howl({
+            src: ["./assets/music/deuteronomy_-_evaporation_-_02_starboarding_ura_(w-_Darius).mp3"],
+            loop: true,
+
+            autoplay: false,
+            volume: 0,
+            html5: true,
+            preload: "metadata",
+        }),
+        0.7
+    ),
+    addMaxVolume(
+        new Howl({
+            src: ["./assets/music/gusts_of_wind.mp3"],
+            loop: true,
+
+            autoplay: false,
+            volume: 0,
+            html5: true,
+            preload: "metadata",
+        }),
+        0.25
+    ),
+    addMaxVolume(
+        new Howl({
+            src: ["./assets/music/birds_noises.mp3"],
+            loop: true,
+
+            autoplay: false,
+            volume: 0,
+            html5: true,
+            preload: "metadata",
+        }),
+        0.5
+    ),
+    addMaxVolume(
+        new Howl({
+            src: ["./assets/music/deuteronomy_-_evaporation_-_01_establishing_shot_ura.mp3"],
+            loop: true,
+
+            autoplay: false,
+            volume: 0,
+            html5: true,
+            preload: "metadata",
+        }),
+        0.2
+    ),
+];
+
+const musicEnd1: Array<Howl> = [
     addMaxVolume(
         new Howl({
             src: ["./assets/music/deuteronomy_-_winter,_again,_soon_(vignettes)_-_03_empty_home_on_the_escarpment.mp3"],
@@ -91,11 +227,11 @@ const music3: Array<Howl> = [
     ),
 ];
 
-const music4: Array<Howl> = [
+const musicEnd2: Array<Howl> = [
     addMaxVolume(
         new Howl({
-            src: ["./assets/music/glitchOST_Enchanted_Woods.mp3"],
             loop: true,
+            src: ["./assets/music/deuteronomy_-_evaporation_-_01_establishing_shot_ura.mp3"],
 
             autoplay: false,
             volume: 0,
@@ -106,10 +242,26 @@ const music4: Array<Howl> = [
     ),
 ];
 
+const musicHome1: Array<Howl> = [
+    addMaxVolume(
+        new Howl({
+            src: ["./assets/music/deuteronomy_-_evaporation_-_01_establishing_shot_ura.mp3"],
+            loop: true,
+
+            autoplay: false,
+            volume: 0,
+            html5: true,
+            preload: "metadata",
+        }),
+        0.4
+    ),
+];
+
+
 const musicMenu: Array<Howl> = [
     addMaxVolume(
         new Howl({
-            src: ["./assets/music/Darius_-_caractère_difficile_-_01_c'est_difficile.mp3"],
+            src: ["./assets/music/glitchOST_Enchanted_Woods.mp3"],
             loop: true,
 
             autoplay: false,
@@ -136,11 +288,14 @@ type MusicManager = {
 const musicManager: MusicManager = {
     activeSoundtrack: null,
     soundtracks: [
-        { area: "earth", soundtrack: music1 },
-        { area: "dreamMusicA", soundtrack: music0 },
-        { area: "dreamMusicB", soundtrack: music2 },
-        { area: "endA", soundtrack: music4 },
-        { area: "endB", soundtrack: music3 },
+        { area: "earthMusicA", soundtrack: musicHome1 },
+        { area: "earthMusicB", soundtrack: mixMusic },
+        { area: "dreamMusicA", soundtrack: dreamMusicA },
+        { area: "dreamMusicB", soundtrack: dreamMusicB },
+        { area: "dreamMusicC", soundtrack: dreamMusicC },
+        { area: "dreamMusicD", soundtrack: dreamMusicD },
+        { area: "endA", soundtrack: musicEnd2 },
+        { area: "endB", soundtrack: musicEnd1 },
         { area: "menu", soundtrack: musicMenu },
     ],
 

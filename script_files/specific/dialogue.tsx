@@ -516,7 +516,7 @@ export const dialogue: dialogueObject = {
     ],
     gate1_4: [
         {
-            text: "This is right. This is how things should be.",
+            text: "This is how things should be.",
             playerOptions: [
                 {
                     text: "Enter",
