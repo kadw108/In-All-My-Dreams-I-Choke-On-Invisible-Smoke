@@ -54,3 +54,12 @@ div.cutscenePanel > .closeButton {
 #inventory > img {
     width: 30px;
 }
+
+.transition {
+    font-size: 80px;
+    text-align: center;
+    display: block;
+}
+.transition a {
+    text-decoration: none;
+}

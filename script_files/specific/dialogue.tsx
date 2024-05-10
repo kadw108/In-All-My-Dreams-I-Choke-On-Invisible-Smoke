@@ -256,8 +256,192 @@ export const dialogue: dialogueObject = {
         {
             text: "Do you love your family?",
             playerOptions: [
-                { text: "Yes", nextPassage: 1 },
-                { text: "No", nextPassage: 1 },
+                {
+                    text: "I think so.",
+                    nextPassage: 1,
+                    callback: () => {
+                        // @ts-expect-error (for story)
+                        story.connection++;
+                        (document.querySelector(".arrow.up") as HTMLElement).style.display = "block";
+                    },
+                },
+                {
+                    text: "I don't think so.",
+                    nextPassage: 1,
+                    callback: () => {
+                        // @ts-expect-error (for story)
+                        story.connection--;
+                        (document.querySelector(".arrow.up") as HTMLElement).style.display = "block";
+                    },
+                },
+            ],
+        },
+        {
+            text: "You may proceed.",
+        },
+    ],
+    questionB: [
+        {
+            text: "Do you love your friends?",
+            playerOptions: [
+                {
+                    text: "I think so.",
+                    nextPassage: 1,
+                    callback: () => {
+                        // @ts-expect-error (for story)
+                        story.connection++;
+                        (document.querySelector(".arrow.up") as HTMLElement).style.display = "block";
+                    },
+                },
+                {
+                    text: "I don't think so.",
+                    nextPassage: 1,
+                    callback: () => {
+                        // @ts-expect-error (for story)
+                        story.connection--;
+                        (document.querySelector(".arrow.up") as HTMLElement).style.display = "block";
+                    },
+                },
+                {
+                    text: "I don't have any.",
+                    nextPassage: 1,
+                    callback: () => {
+                        // @ts-expect-error (for story)
+                        story.connection -= 2;
+                        (document.querySelector(".arrow.up") as HTMLElement).style.display = "block";
+                    },
+                },
+            ],
+        },
+        {
+            text: "You may proceed.",
+        },
+    ],
+    questionC: [
+        {
+            text: "Are you going to Hell when you die?",
+            playerOptions: [
+                {
+                    text: "Yes.",
+                    nextPassage: 1,
+                    callback: () => {
+                        // @ts-expect-error (for story)
+                        story.connection -= 2;
+                        (document.querySelector(".arrow.up") as HTMLElement).style.display = "block";
+                    },
+                },
+                {
+                    text: "I don't know.",
+                    nextPassage: 1,
+                    callback: () => {
+                        // @ts-expect-error (for story)
+                        story.connection += 0;
+                        (document.querySelector(".arrow.up") as HTMLElement).style.display = "block";
+                    },
+                },
+            ],
+        },
+        {
+            text: "You may proceed.",
+        },
+    ],
+    questionD: [
+        {
+            text: "Can you imagine a happy future for yourself?",
+            playerOptions: [
+                {
+                    text: "I'll end up just like my grandfather.",
+                    nextPassage: 1,
+                    callback: () => {
+                        // @ts-expect-error (for story)
+                        story.connection -= 1;
+                        (document.querySelector(".arrow.up") as HTMLElement).style.display = "block";
+                    },
+                },
+                {
+                    text: "I'll end up just like my grandmother.",
+                    nextPassage: 1,
+                    callback: () => {
+                        // @ts-expect-error (for story)
+                        story.connection -= 1;
+                        (document.querySelector(".arrow.up") as HTMLElement).style.display = "block";
+                    },
+                },
+            ],
+        },
+        {
+            text: "You may proceed.",
+        },
+    ],
+    questionF: [
+        {
+            text: "Do you love anyone?",
+            playerOptions: [
+                {
+                    text: "I'm incapable of feeling love. I'm a depraved individual.",
+                    nextPassage: 1,
+                    callback: () => {
+                        // @ts-expect-error (for story)
+                        story.connection -= 1;
+                        (document.querySelector(".arrow.up") as HTMLElement).style.display = "block";
+                    },
+                },
+            ],
+        },
+        {
+            text: "You may proceed.",
+        },
+    ],
+    questionG: [
+        {
+            text: "Is there any hope for you?",
+            playerOptions: [
+                {
+                    text: "No.",
+                    nextPassage: 1,
+                    callback: () => {
+                        // @ts-expect-error (for story)
+                        story.connection -= 1;
+                        (document.querySelector(".arrow.up") as HTMLElement).style.display = "block";
+                    },
+                },
+                {
+                    text: "There might be.",
+                    nextPassage: 1,
+                    callback: () => {
+                        // @ts-expect-error (for story)
+                        story.connection -= 0;
+                        (document.querySelector(".arrow.up") as HTMLElement).style.display = "block";
+                    },
+                },
+            ],
+        },
+        {
+            text: "You may proceed.",
+        },
+    ],
+    questionH: [
+        {
+            text: "Is life meaningless?",
+            playerOptions: [
+                {
+                    text: "Without God, all things are meaningless.",
+                    nextPassage: 1,
+                    callback: () => {
+                        // @ts-expect-error (for story)
+                        story.connection -= 1;
+                        (document.querySelector(".arrow.up") as HTMLElement).style.display = "block";
+                    },
+                },
+                {
+                    text: "God hates me.",
+                    nextPassage: 1,
+                    callback: () => {
+                        // @ts-expect-error (for story)
+                        story.connection -= 2;
+                        (document.querySelector(".arrow.up") as HTMLElement).style.display = "block";
+                    },
+                },
             ],
         },
         {
@@ -470,12 +654,6 @@ export const dialogue: dialogueObject = {
     prism: [
         {
             text: "Hey...",
-        },
-        {
-            text: "Why are you still there?",
-        },
-        {
-            text: "What can they even offer you?",
         },
         {
             text: "You know as well as I do where you belong.",

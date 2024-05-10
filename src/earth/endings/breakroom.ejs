@@ -1,7 +1,7 @@
 <snippet tags="earth" name="breakroom_transition">
     <div class="absoluteAlign bothHalves gameBg" style="background-image: url('assets/garden_glade.gif'); background-size: cover"></div>
     <div class="absoluteAlign blackBg textPanel">
-        [TODO]
+        <span class="transition">❈</span>
 
         <p>[[⮕ Next|breakroom1]]</p>
     </div>
@@ -84,7 +84,23 @@
     <div class="absoluteAlign blackBg textPanel">
         <p>The music is swelling. I need to go.</p>
 
-        <p>[[⮕ Next|breakroom10]]</p>
+        <p><a id="branch">⮕ Next</a></p>
     </div>
+
+    <% 
+    $(function () {
+        const branch = document.getElementById("branch");
+        if (story.connection < -2) {
+            branch.addEventListener("click", () => {
+                story.showSnippet("endingA_transition");
+            })
+        }
+        else {
+            branch.addEventListener("click", () => {
+                story.showSnippet("endingB_transition");
+            })
+        }
+    });
+    %>
 </snippet>
 

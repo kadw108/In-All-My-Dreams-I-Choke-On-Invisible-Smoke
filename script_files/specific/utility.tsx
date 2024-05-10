@@ -31,20 +31,24 @@ export function addArrow(direction: string, destination: string, top: number | u
             arrow.style.transform = "rotate(270deg)";
             arrow.style.top = "2%";
             arrow.style.left = "47%";
+            arrow.classList.add("up");
             break;
         case "down":
             arrow.style.transform = "rotate(90deg)";
             arrow.style.top = "92%";
             arrow.style.left = "47%";
+            arrow.classList.add("down");
             break;
         case "left":
             arrow.style.transform = "rotate(180deg)";
             arrow.style.top = "45%";
             arrow.style.left = "1%";
+            arrow.classList.add("left");
             break;
         case "right":
             arrow.style.top = "45%";
             arrow.style.left = "95%";
+            arrow.classList.add("right");
             break;
         default:
             console.error("Trying to create arrow with invalid direction: " + direction);
