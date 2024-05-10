@@ -102,10 +102,7 @@ export function playCutsceneComplex(imgSrcList: Array<string>, millisecondList: 
         return;
     }
 
-    const cutsceneDiv = (
-        <div className="absoluteAlign blackBg cutscenePanel">
-        </div>
-    );
+    const cutsceneDiv = <div className="absoluteAlign blackBg cutscenePanel"></div>;
     if (big) {
         cutsceneDiv.classList.add("bigCutscenePanel");
     }
@@ -121,18 +118,21 @@ export function playCutsceneComplex(imgSrcList: Array<string>, millisecondList: 
     function generateShowCutsceneFunction(i: number) {
         return () => {
             cutsceneDiv.innerHTML = "";
-            const image1 = <img src={imgSrcList[i]}/>;
+            const image1 = <img src={imgSrcList[i]} />;
             cutsceneDiv.append(image1);
 
             setTimeout(() => {
                 if (i < imgSrcList.length - 1) {
-                    const next = <button type="button" className="nextButton">⮕</button>;
+                    const next = (
+                        <button type="button" className="nextButton">
+                            ⮕
+                        </button>
+                    );
                     next.addEventListener("click", () => {
                         timeoutFunctionList[i + 1]();
                     });
                     cutsceneDiv.append(next);
-                }
-                else {
+                } else {
                     const closeButton = addCloseButton(cutsceneDiv);
                     closeButton.addEventListener("click", () => {
                         screenCover.style.display = "none";
@@ -143,7 +143,7 @@ export function playCutsceneComplex(imgSrcList: Array<string>, millisecondList: 
                     });
                 }
             }, millisecondList[i]);
-        }
+        };
     }
 
     for (let i = 0; i < imgSrcList.length; i++) {
@@ -152,4 +152,3 @@ export function playCutsceneComplex(imgSrcList: Array<string>, millisecondList: 
 
     timeoutFunctionList[0]();
 }
-

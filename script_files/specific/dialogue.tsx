@@ -477,7 +477,7 @@ export const dialogue: dialogueObject = {
                     nextPassage: null,
                     callback: () => {
                         // @ts-expect-error (for story)
-                        story.showSnippet("youA_transition");
+                        story.showSnippet("dream1end");
                     },
                 },
             ],
@@ -563,7 +563,7 @@ export const dialogue: dialogueObject = {
                         story.myInventory.removeItem("lily");
 
                         // @ts-expect-error (for story)
-                        story.showSnippet("homeB_transition");
+                        story.showSnippet("dream2end");
                     },
                 },
             ],
@@ -643,7 +643,7 @@ export const dialogue: dialogueObject = {
 
                         playCutsceneComplex(["assets/cutscene_cover.gif", "assets/cutscene_cover_end.gif"], [6000, 8000], true, () => {
                             // @ts-expect-error (for story)
-                            story.showSnippet("lifeA_transition");
+                            story.showSnippet("dream3end");
                         });
                     },
                 },
@@ -663,7 +663,7 @@ export const dialogue: dialogueObject = {
                     nextPassage: null,
                     callback: () => {
                         // @ts-expect-error (for story)
-                        story.showSnippet("musicB_transition");
+                        story.showSnippet("dream4end");
                     },
                 },
             ],

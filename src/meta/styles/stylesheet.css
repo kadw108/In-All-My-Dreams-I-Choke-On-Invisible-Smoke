@@ -9,108 +9,109 @@ GENERAL STYLE
     --color2: #fff;
     --shadow: #ddd;
 
-  	--screenheight: 675px;
-  	--screenwidth: 765px;
-  	--screenheightbig: 700px;
-  	--screenwidthbig: 800px;
+    --screenheight: 675px;
+    --screenwidth: 765px;
+    --screenheightbig: 700px;
+    --screenwidthbig: 800px;
 }
 
 /* Background */
 #bg {
-  height: 100%;
-  width: 100%;
+    height: 100%;
+    width: 100%;
 
-  position: fixed;
-  top: 0;
-  left: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
 
-  z-index: -1;
-  
-  background-image: url("assets/background.png");
-  background-color: #000000;
+    z-index: -1;
+
+    background-image: url("assets/background.png");
+    background-color: #000000;
 }
 
 /* Passage container */
 #passages {
-  margin: auto;
-  margin-top: 10px; /* for itch.io embed being weird with margins */
+    margin: auto;
+    margin-top: 10px; /* for itch.io embed being weird with margins */
 
-  width: 100vw;
-  height: 66vw;
-  min-width: 600px;
-  min-height: 400px;
-  max-width: 900px;
-  max-height: 600px;
-  
-  /* Prevent images from extending past div bounds
+    width: 100vw;
+    height: 66vw;
+    min-width: 600px;
+    min-height: 400px;
+    max-width: 900px;
+    max-height: 600px;
+
+    /* Prevent images from extending past div bounds
   object-fit: cover;
   overflow: hidden;
   */
 
-  background-color: rgba(0, 0, 0, 0.92);
-  box-shadow: 0px 0px 5px 5px rgb(0, 0, 5);
-  
-  font-size: 100%;
-  font-family: "MonoFont", monospace;
+    background-color: rgba(0, 0, 0, 0.92);
+    box-shadow: 0px 0px 5px 5px rgb(0, 0, 5);
 
-  position: relative;
+    font-size: 100%;
+    font-family: "MonoFont", monospace;
+
+    position: relative;
 }
 
 #screenBg {
-  width: 100%;
-  height: 100%;
+    width: 100%;
+    height: 100%;
 
-  background-color: #000;
-  background-size: cover;
-  background-position: center;
-  
-  /* border: 2px solid white; */
-  border-image: url(assets/white3.gif);
-  border-image-slice: 4;
+    background-color: #000;
+    background-size: cover;
+    background-position: center;
 
-  position: relative;
-  z-index: 0;
+    border: 1px dotted #666666;
+    border-image: url(assets/white3.gif);
+    border-image-slice: 4;
+
+    position: relative;
+    z-index: 0;
 }
 
 #screenContents {
-  width: 97%;
-  height: 97%;
-  margin: auto;
+    width: 97%;
+    height: 97%;
+    margin: auto;
 }
 div .topHalf {
-  width: 100%;
-  height: 50%;
-  bottom: 50%;
-  margin: auto;
+    width: 100%;
+    height: 50%;
+    bottom: 50%;
+    margin: auto;
 }
 div .topHalf img {
-  width: 100%;
-  height: 100%;
+    width: 100%;
+    height: 100%;
 }
-div .bottomHalf, div .bothHalves {
-  width: 100%;
-  height: 100%;
-  bottom: 0%;
-  top: auto;
+div .bottomHalf,
+div .bothHalves {
+    width: 100%;
+    height: 100%;
+    bottom: 0%;
+    top: auto;
 
-  margin: auto;
+    margin: auto;
 
-  padding: 5px;
-  padding-bottom: 0px;
-  overflow: scroll;
+    padding: 5px;
+    padding-bottom: 0px;
+    overflow: scroll;
 }
 div .bottomHalf {
-  height: 150px;
-  bottom: 0%;
-  top: auto;
+    height: 150px;
+    bottom: 0%;
+    top: auto;
 
-  border-image: url("assets/black1.gif");
-  border-color: #222;
-  border-image-slice: 8;
-  border-width: 7px;
-  border-image-repeat: repeat;
+    border-image: url("assets/black1.gif");
+    border-color: #222;
+    border-image-slice: 8;
+    border-width: 7px;
+    border-image-repeat: repeat;
 
-  background-color: rgba(0, 0, 0, 0.85);
+    background-color: rgba(0, 0, 0, 0.85);
 }
 
 /*
@@ -118,99 +119,99 @@ CUSTOM STYLES
 */
 
 .menuPanel {
-  overflow: scroll;
-  padding: 3px 7px 3px 7px;
-  margin: 5px;
+    overflow: scroll;
+    padding: 3px 7px 3px 7px;
+    margin: 5px;
 
-  background-color: #001020;
-  border: 1px dotted #ccc;
-  border-radius: 10px;
+    background-color: #001020;
+    border: 1px dotted #ccc;
+    border-radius: 10px;
 }
 
 .hoverDiv {
-  position: absolute;
-  z-index: 3;
-  line-height: 100%;
-  padding: 4px;
+    position: absolute;
+    z-index: 3;
+    line-height: 100%;
+    padding: 4px;
 
-  display: none;
+    display: none;
 }
 
 .outlineDiv {
-  outline: none;
-  text-align: center;
-  text-decoration: none;
-  text-shadow: 0 1px 0 rgba(255,255,255,.4);
-  border-radius: 5px;
-  box-shadow: 0 1px 2px rgba(0,0,0,.2),inset 0 -1px 2px #fff;
+    outline: none;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+    border-radius: 5px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), inset 0 -1px 2px #fff;
 
-  color: #fff;
-  border: solid 1px #aaa;
-  background: #000;
+    color: #fff;
+    border: solid 1px #aaa;
+    background: #000;
 }
 
 .blackBg {
-  color: white;
-  background-color: black;
-  border: 2px solid white;
+    color: white;
+    background-color: black;
+    border: 2px solid white;
 }
 
 .absoluteAlign {
-  position: absolute;
+    position: absolute;
 
-  left: 0;
-  right: 0;
-  bottom: 0;
-  top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
 }
 
 .gray {
-  color: #ffffff;
-  text-decoration: underline;
+    color: #ffffff;
+    text-decoration: underline;
 }
 .gray:hover {
-  color: #aaaaaa;
+    color: #aaaaaa;
 }
 
 .red-text {
-  color: #ff0000;
-  text-decoration: underline;
+    color: #ff0000;
+    text-decoration: underline;
 }
 .green-text {
-  color: #00ff00;
-  text-decoration: underline;
+    color: #00ff00;
+    text-decoration: underline;
 }
 
 .smalltext {
-  color: #777777;
-  font-size: 0.8em;
+    color: #777777;
+    font-size: 0.8em;
 }
 
-.noClick{
-  pointer-events: none;
+.noClick {
+    pointer-events: none;
 }
 
 .hidden {
-  display: none;
+    display: none;
 }
 
 .transitionMessage {
-  font-style: italic;
-  font-size: 80%;
+    font-style: italic;
+    font-size: 80%;
 }
 
 .center {
-  text-align: center;
+    text-align: center;
 }
 
 #screenCover {
-  background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.6);
 
-  z-index: 7;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  display: none;
+    z-index: 7;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: none;
 }
 
 /*
@@ -218,76 +219,79 @@ OVERRIDING DEFAULT CSS STYLES
 */
 
 body {
-  color: #ffffff;
-  word-wrap: break-word;
+    color: #ffffff;
+    word-wrap: break-word;
 }
 
 small {
-  font-size: 70%;
+    font-size: 70%;
 }
 
 /* For replacelink */
 .initial {
-  color: #eeeeee;
+    color: #eeeeee;
 }
 .initial:hover {
-  color: #666666;
+    color: #666666;
 }
 
 a:not([data-snippet]) {
-  font-weight: bold;
-  color: inherit;
-  text-decoration: inherit;
-  cursor: pointer;
+    font-weight: bold;
+    color: inherit;
+    text-decoration: inherit;
+    cursor: pointer;
 }
 a[data-snippet] {
-  color: #809fdd;
-  text-decoration: underline;
-  text-underline-offset: 3px;
+    color: #809fdd;
+    text-decoration: underline;
+    text-underline-offset: 3px;
 }
 a:hover {
-  text-decoration: inherit;
-  color: #446699;
+    text-decoration: inherit;
+    color: #446699;
 }
 .hiddenLink a {
-  font-weight: inherit;
-  text-decoration: inherit;
-  color: inherit;
+    font-weight: inherit;
+    text-decoration: inherit;
+    color: inherit;
 }
 a.outsideLink {
-  color: #aac0cf;
+    color: #aac0cf;
 }
 a.outsideLink:hover {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
 div {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 hr {
-  height: 0px;
-  margin: 3px 0;
+    height: 0px;
+    margin: 3px 0;
 }
 
 button {
-  background-color: #000;
-  color: #fff;
-  cursor: pointer;
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
 
-  font-family: 'MonoFont', monospace;
+    font-family: "MonoFont", monospace;
 }
 button:hover {
-  background-color: #444;
+    background-color: #444;
 }
-.linkReplaced, .linkHider {
-  cursor: pointer;
+.linkReplaced,
+.linkHider {
+    cursor: pointer;
 }
 
 /* Fonts */
 
-h1, h2, h3 {
-  font-family: "Display1", "MonoFont", monospace;
-  letter-spacing: 0.02em;
-  text-transform: uppercase; 
+h1,
+h2,
+h3 {
+    font-family: "Display1", "MonoFont", monospace;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
 }

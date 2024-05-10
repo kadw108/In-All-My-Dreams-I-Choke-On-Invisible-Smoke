@@ -15,4 +15,6 @@ $(function () {
         bottomHalf.prepend(message);
         story.transitionMessage = null;
     }
+
+    mainScript.musicManager.playSoundtrack(snippet.tags);
 });

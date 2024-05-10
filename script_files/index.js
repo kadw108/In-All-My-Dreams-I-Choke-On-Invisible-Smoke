@@ -1,6 +1,7 @@
 import { addWrapperHtml } from "./addWrapperHtml";
 import { addReplaceLink } from "./addReplaceLink";
 import { addMenuPanels } from "./addMenuPanels";
+import {musicManager} from "./music";
 
 import {addArrow} from "./specific/utility";
 import {addNpc, showDialogue, addInteractable} from "./specific/npcs";
@@ -12,5 +13,6 @@ export {
   addArrow,
   addNpc, showDialogue, addInteractable,
   dialogue,
-  Inventory
+  Inventory,
+  musicManager
 }

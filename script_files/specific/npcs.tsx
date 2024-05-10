@@ -12,7 +12,7 @@ type Dialogue = {
 };
 export type dialogueObject = { [id: string]: Array<Dialogue> };
 
-export function addNpc(src: string, top: number, left: number, width: number, name: string|null, dialogueList: Array<Dialogue>): void {
+export function addNpc(src: string, top: number, left: number, width: number, name: string | null, dialogueList: Array<Dialogue>): void {
     const container = document.getElementById("iff-snippet");
 
     let npc: HTMLElement;
@@ -92,8 +92,7 @@ export function showDialogue(dialogueList: Array<Dialogue>, index: number = 0) {
             optionHtml.addEventListener("click", () => {
                 showDialogue(dialogueList, index + 1);
             });
-        }
-        else {
+        } else {
             optionHtml = <a>⮕ End</a>;
             optionHtml.addEventListener("click", () => {
                 dialoguePanel.remove();

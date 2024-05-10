@@ -45,7 +45,7 @@ export class Inventory {
 
         const iffSnippet = document.getElementById("iff-snippet");
         iffSnippet.append(inventoryDiv);
-        return inventoryDiv
+        return inventoryDiv;
     }
 
     updatePanel() {
