@@ -33,6 +33,7 @@ GENERAL STYLE
 /* Passage container */
 #passages {
   margin: auto;
+  margin-top: 10px; /* for itch.io embed being weird with margins */
 
   width: 100vw;
   height: 66vw;
@@ -63,7 +64,7 @@ GENERAL STYLE
   background-size: cover;
   background-position: center;
   
-  border: 2px solid white;
+  /* border: 2px solid white; */
   border-image: url(assets/white3.gif);
   border-image-slice: 4;
 

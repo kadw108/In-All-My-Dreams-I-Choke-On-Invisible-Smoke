@@ -12,7 +12,7 @@ export const dialogue: dialogueObject = {
             text: "Oh! You've found the treasure... I can see it on you!",
         },
         {
-            text: "You're so brave.",
+            text: "You're so brave...",
         },
     ],
 
@@ -170,22 +170,22 @@ export const dialogue: dialogueObject = {
     // PALE FIRE
     miscDialogue2a: [
         {
-            text: "<em>The more lucid and overwhelming one's belief in Heaven, the greater the temptation to get it over with, this business of life.</em>",
+            text: "The more lucid and overwhelming one's belief in Heaven, the greater the temptation to get it over with, this business of life.",
         },
         {
-            text: "<em>Of the not very many ways known of shedding one's body, falling, falling, falling is the supreme method, but you have to select your sill or ledge very carefully so as not to hurt yourself or others.</em>",
+            text: "Of the not very many ways known of shedding one's body, falling, falling, falling is the supreme method, but you have to select your sill or ledge very carefully so as not to hurt yourself or others.",
         },
         {
-            text: "<em>The ideal drop is from an aircraft, your muscles relaxed, your pilot puzzled, your packed parachute shuffled off, cast off, shrugged off—farewell!</em>",
+            text: "The ideal drop is from an aircraft, your muscles relaxed, your pilot puzzled, your packed parachute shuffled off, cast off, shrugged off—farewell!",
         },
         {
-            text: "<em>Down you go, but all the while you feel suspended and buoyed as you somersault in slow motion like a somnolent tumbler pigeon, and sprawl supine on the eiderdown of the air...</em>",
+            text: "Down you go, but all the while you feel suspended and buoyed as you somersault in slow motion like a somnolent tumbler pigeon, and sprawl supine on the eiderdown of the air...",
         },
         {
-            text: "<em>...Or lazily turn to embrace your pillow, enjoying every last instant of soft, deep, death-padded life, with the earth's green seesaw now above, now below, and the voluptuous crucifixion, as you stretch yourself in the growing rush, in the nearing swish...</em>",
+            text: "...Or lazily turn to embrace your pillow, enjoying every last instant of soft, deep, death-padded life, with the earth's green seesaw now above, now below, and the voluptuous crucifixion, as you stretch yourself in the growing rush, in the nearing swish...",
         },
         {
-            text: "<em>...And then your loved body's obliteration in the Lap of the Lord.</em>",
+            text: "...And then your loved body's obliteration in the Lap of the Lord.",
             playerOptions: [
                 {
                     text: "OFFER",
@@ -202,36 +202,36 @@ export const dialogue: dialogueObject = {
     ],
     miscDialogue2b: [
         {
-            text: "<em>When the soul adores Him Who guides it through mortal life, when it distinguishes His sign at every turn of the trail, painted on the boulder and notched in the fir trunk, when every page in the book of one's personal fate bears His watermark, how can one doubt that He will also preserve us through all eternity?</em>",
+            text: "When the soul adores Him Who guides it through mortal life, when it distinguishes His sign at every turn of the trail, painted on the boulder and notched in the fir trunk, when every page in the book of one's personal fate bears His watermark, how can one doubt that He will also preserve us through all eternity?",
         },
         {
-            text: "<em>So what can stop one from effecting the transition? What can help us to resist the intolerable temptation? What can prevent us from yielding to the burning desire for merging in God?</em>",
+            text: "So what can stop one from effecting the transition? What can help us to resist the intolerable temptation? What can prevent us from yielding to the burning desire for merging in God?",
         },
         {
-            text: "<em>We who burrow in filth every day may be forgiven perhaps the one sin that ends all sins.</em>",
+            text: "We who burrow in filth every day may be forgiven perhaps the one sin that ends all sins.",
         },
     ],
     miscDialogue3: [
         {
-            text: "<em>If God does not exist, then both man and the universe are inevitably doomed to death.</em>",
+            text: "If God does not exist, then both man and the universe are inevitably doomed to death.",
         },
         {
-            text: "<em>Man, like all biological organisms, must die. With no hope of immortality, man's life leads only to the grave. His life is but a spark in the infinite blackness, a spark that appears, flickers, and dies forever.</em>",
+            text: "Man, like all biological organisms, must die. With no hope of immortality, man's life leads only to the grave. His life is but a spark in the infinite blackness, a spark that appears, flickers, and dies forever.",
         },
         {
-            text: "<em>Scientists tell us that the universe is expanding, and everything in it is growing farther and farther apart.</em>",
+            text: "Scientists tell us that the universe is expanding, and everything in it is growing farther and farther apart.",
         },
         {
-            text: "<em>As it does so, it grows colder and colder, and its energy is used up. Eventually all the stars will burn out and all matter will collapse into dead stars and black holes.</em>",
+            text: "As it does so, it grows colder and colder, and its energy is used up. Eventually all the stars will burn out and all matter will collapse into dead stars and black holes.",
         },
         {
-            text: "<em>There will be no light at all; there will be no heat; there will be no life; only the corpses of dead stars and galaxies, ever expanding into the endless darkness and the cold recesses of space—a universe in ruins.</em>",
+            text: "There will be no light at all; there will be no heat; there will be no life; only the corpses of dead stars and galaxies, ever expanding into the endless darkness and the cold recesses of space—a universe in ruins.",
         },
         {
-            text: "<em>So not only is the life of each individual person doomed; the entire human race is doomed.</em>",
+            text: "So not only is the life of each individual person doomed; the entire human race is doomed.",
         },
         {
-            text: "<em>There is no escape.</em>",
+            text: "There is no escape.",
             playerOptions: [
                 {
                     text: "OFFER",
@@ -248,7 +248,7 @@ export const dialogue: dialogueObject = {
     ],
     miscDialogue3b: [
         {
-            text: "<em>There is no hope.</em>",
+            text: "There is no hope.",
         },
     ],
 
