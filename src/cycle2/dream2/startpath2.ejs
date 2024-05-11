@@ -2,6 +2,29 @@
     <div style="text-align: center">
         <p class="transition">[[❃❃❃❃❃❃|garden3_startpath]]</p>
     </div>
+<% 
+$(function () {
+    mainScript.preload([
+        "assets/9_tower.png.gif",
+        "assets/9_tower_zoom1.png.gif",
+        "assets/9_tower_zoom2.png.gif",
+        "assets/9_towerreal1.png.gif",
+        "assets/9_towerreal10.png.gif",
+        "assets/9_towerreal11.png.gif",
+        "assets/9_towerreal12.png.gif",
+        "assets/9_towerreal13.png.gif",
+        "assets/9_towerreal2.png.gif",
+        "assets/9_towerreal3.png.gif",
+        "assets/9_towerreal4.png.gif",
+        "assets/9_towerreal5.png.gif",
+        "assets/9_towerreal7.png.gif",
+        "assets/9_towerreal8.png.gif",
+        "assets/9_towerreal9.png.gif",
+        "assets/tower_before.gif",
+    ]);
+});
+%>
+
 </snippet>
 
 <snippet tags="dream dreamMusicC" name="garden3_startpath">
@@ -35,6 +58,8 @@ $(function () {
 $(function () {
     mainScript.addArrow("up", "garden3_startpath4", 55, 43);
     mainScript.addArrow("down", "garden3_startpath2", 92, 40);
+
+    mainScript.addNpc("assets/d_cheeyon.gif", 20, 7, 23, "Cheeyon", mainScript.dialogue.miscDialogue4);
 });
 %>
 </snippet>
@@ -60,12 +85,12 @@ $(function () {
 
 <% 
 $(function () {
-    mainScript.addArrow("down", "garden3_startpath6", 92, 40);
+    mainScript.addArrow("down", "garden3_startpath4", 92, 40);
 
     const gate1 = document.getElementById("gate1");
     gate1.style.cursor = "pointer";
     gate1.addEventListener("click", () => {
-        mainScript.showDialogue(mainScript.dialogue.gate1_3)
+        mainScript.showDialogue(null, mainScript.dialogue.gate1_3);
     });
 });
 %>

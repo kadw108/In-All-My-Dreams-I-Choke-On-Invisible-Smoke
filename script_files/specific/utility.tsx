@@ -17,9 +17,9 @@ function addCloseButton(element: Element): Element {
     return closeButton;
 }
 
-export function clearAndAddCloseButton(element: Element) {
+export function clearAndAddCloseButton(element: Element): Element {
     element.innerHTML = "";
-    addCloseButton(element);
+    return addCloseButton(element);
 }
 
 export function addArrow(direction: string, destination: string, top: number | undefined = undefined, left: number | undefined = undefined): void {
@@ -151,4 +151,29 @@ export function playCutsceneComplex(imgSrcList: Array<string>, millisecondList: 
     }
 
     timeoutFunctionList[0]();
+}
+
+/* To preload images
+From https://twinery.org/forum/discussion/8195/preloading-background-images-sugarcube-2-0-twine-2
+*/
+export function preload(imageList: Array<string>) {
+    // not using Object.hasOwn since that requires es2022
+    if (!window.hasOwnProperty("_ImageCache")) {
+        // @ts-expect-error probably fine
+        window._ImageCache = [];
+        // @ts-expect-error probably fine
+        window.preloadedImages = [];
+    }
+
+    imageList.map(function (url) {
+        // @ts-expect-error probably fine
+        if (!window.preloadedImages.includes(url)) {
+            const image = document.createElement("img");
+            image.src = url;
+            // @ts-expect-error probably fine
+            window._ImageCache.push(image);
+            // @ts-expect-error probably fine
+            window.preloadedImages.push(url);
+        }
+    });
 }

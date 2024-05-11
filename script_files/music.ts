@@ -324,8 +324,8 @@ const musicManager: MusicManager = {
         // this timeout function executes
         if (this.activeSoundtrack === null || this.activeSoundtrack.area === newSoundtrack.area) {
             for (const howl of newSoundtrack.soundtrack) {
-                console.log("activate howl");
-                console.log(howl);
+                // console.log("activate howl");
+                // console.log(howl);
 
                 let maxVolume = howl["maxVolume"];
                 if (maxVolume === undefined) {
@@ -333,12 +333,12 @@ const musicManager: MusicManager = {
                 }
 
                 if (howl.state() === "unloaded") {
-                    console.log("howl is unloaded. loading.");
+                    // console.log("howl is unloaded. loading.");
                     howl.load();
                 }
 
                 if (!howl.playing()) {
-                    console.log("howl is not playing. playing now.");
+                    // console.log("howl is not playing. playing now.");
                     howl.play();
                 }
 
@@ -353,7 +353,7 @@ const musicManager: MusicManager = {
     },
 
     playSoundtrack: function (snippetTags: Array<string>) {
-        console.log(snippetTags);
+        // console.log(snippetTags);
         let newSoundtrack = this.soundtracks.find((i: MusicAreaMap) => snippetTags.includes(i.area));
 
         if (newSoundtrack === undefined) {
@@ -364,11 +364,11 @@ const musicManager: MusicManager = {
 
         // fade out currently playing ost
         if (this.activeSoundtrack !== null) {
-            console.log("fading out " + this.activeSoundtrack.area);
+            // console.log("fading out " + this.activeSoundtrack.area);
             this.activeSoundtrack.soundtrack.forEach((howl) => {
                 howl.fade(howl.volume(), 0, 3000);
-                console.log("3 seconds to fade out howl");
-                console.log(howl);
+                // console.log("3 seconds to fade out howl");
+                // console.log(howl);
             });
         }
 
@@ -377,7 +377,7 @@ const musicManager: MusicManager = {
         if (newSoundtrack !== null) {
             // fade in new ost
             setTimeout(() => {
-                console.log("playing " + newSoundtrack.area);
+                // console.log("playing " + newSoundtrack.area);
                 this.activateSoundtrackMusic(newSoundtrack);
             }, 1000);
         }

@@ -29,6 +29,23 @@
     margin: 0;
 }
 
+#namePanel {
+    z-index: 15;
+
+    width: fit-content;
+    height: fit-content;
+    padding: 4px;
+
+    position: absolute;
+    top: auto;
+    bottom: 145px;
+    left: 0;
+    right: 0;
+
+    background-color: rgba(0, 0, 0, 0.85);
+    text-decoration: underline;
+}
+
 #gate1 {
     /* shimmer https://www.codeguage.com/blog/shimmer-effect-html-css */
     background: linear-gradient(

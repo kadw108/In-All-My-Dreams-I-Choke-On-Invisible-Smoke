@@ -1,18 +1,83 @@
-story.transitionMessage = null;
-story.myInventory = new mainScript.Inventory();
-
-story.connection = 0;
-
-/* To preload images */
-/* From https://twinery.org/forum/discussion/8195/preloading-background-images-sugarcube-2-0-twine-2 */
 (function () {
-    const preload = [
-        /* "assets/loading.gif", */
-    ];
-
-    window._ImageCache = preload.map(function (url) {
-        const image = document.createElement("img");
-        image.src = url;
-        return image;
-    });
+    mainScript.preload([
+        "assets/9_center1.png.gif",
+        "assets/9_center2.png.gif",
+        "assets/9_church.png.gif",
+        "assets/9_flower1.png.gif",
+        "assets/9_flower2.png.gif",
+        "assets/9_flower3.png.gif",
+        "assets/9_garden.png.gif",
+        "assets/9_garden2.png.gif",
+        "assets/9_garden3.png.gif",
+        "assets/9_garden4.png.gif",
+        "assets/9_gate1.png.gif",
+        "assets/9_house1.png.gif",
+        "assets/9_house2.png.gif",
+        "assets/9_houseInterior.png.gif",
+        "assets/9_path1.png.gif",
+        "assets/9_path2.png.gif",
+        "assets/9_path3.png.gif",
+        "assets/9_path4.png.gif",
+        "assets/9_path5.png.gif",
+        "assets/9_path6.png.gif",
+        "assets/arrow.gif",
+        "assets/black1.gif",
+        "assets/cutscene1_2.gif",
+        "assets/cutscene_cover.gif",
+        "assets/cutscene_cover_end.gif",
+        "assets/cutscene_deer_left.gif",
+        "assets/cutscene_deer_right.gif",
+        "assets/d_aditi.gif",
+        "assets/d_amalgamia.gif",
+        "assets/d_benedykt.gif",
+        "assets/d_cheeyon.gif",
+        "assets/d_deer1.gif",
+        "assets/d_deer2.gif",
+        "assets/d_ellie.gif",
+        "assets/d_ifeanyi.gif",
+        "assets/d_isaiah.gif",
+        "assets/d_jacob.gif",
+        "assets/d_jessamyn.gif",
+        "assets/d_joyce.gif",
+        "assets/d_kseniya.gif",
+        "assets/d_lekha.gif",
+        "assets/d_mathias.gif",
+        "assets/d_niveah.gif",
+        "assets/d_prism.gif",
+        "assets/d_tanqing.gif",
+        "assets/d_wei.gif",
+        "assets/d_wesley.gif",
+        "assets/d_yiyun.gif",
+        "assets/earth_church2.gif",
+        "assets/earth_classroom.gif",
+        "assets/earth_classroom2.gif",
+        "assets/earth_classroom3.gif",
+        "assets/earth_classroom4.gif",
+        "assets/earth_cubicle.gif",
+        "assets/earth_hotel_suite.gif",
+        "assets/earth_kitchen.gif",
+        "assets/earth_lawn.gif",
+        "assets/earth_livingroom.gif",
+        "assets/earth_picnic_tables.gif",
+        "assets/earth_suburbs.gif",
+        "assets/eden0b.gif",
+        "assets/eden1.gif",
+        "assets/eden2b.gif",
+        "assets/field.gif",
+        "assets/garden_center.gif",
+        "assets/garden_flower1.gif",
+        "assets/garden_flower2.gif",
+        "assets/garden_flower3.gif",
+        "assets/garden_glade.gif",
+        "assets/garden_startpath.gif",
+        "assets/house2_1.gif",
+        "assets/house2_2.gif",
+        "assets/item1.gif",
+        "assets/item2.png",
+        "assets/lily1.gif",
+        "assets/overlook0.gif",
+        "assets/overlook1.gif",
+        "assets/overlook2.gif",
+        "assets/overlook2b.gif",
+    ]);
 })();

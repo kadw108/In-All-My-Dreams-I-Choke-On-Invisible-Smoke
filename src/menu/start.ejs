@@ -1,6 +1,6 @@
 <snippet name="start" tags="menu" start>
     <div style="text-align: center">
-        <h4>GARDEN</h4>
+        <h4>In All My Dreams I Choke On Invisible Smoke</h4>
 
         <p>by KADW</p>
 
@@ -10,4 +10,16 @@
         <p>[[About|about]]</p>
         <p>[[Credits|imageCredits]]</p>
     </div>
+
+    <% 
+    $(function () {
+        /* Reset for easy restart */
+
+        story.transitionMessage = null;
+        story.myInventory = new mainScript.Inventory();
+
+        story.connection = 0;
+    });
+    %>
+
 </snippet>

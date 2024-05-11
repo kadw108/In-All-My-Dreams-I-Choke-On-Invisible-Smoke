@@ -66,13 +66,13 @@ $(function () {
         mainScript.addNpc("assets/d_benedykt.gif", 20, 65, 30, "Benedykt", mainScript.dialogue.gateDialogue);
 
         gate1.addEventListener("click", () => {
-            mainScript.showDialogue(mainScript.dialogue.gate2)
+            mainScript.showDialogue(null, mainScript.dialogue.gate2);
         });
     } else {
         mainScript.addNpc("assets/d_benedykt.gif", 20, 65, 30, "Benedykt", mainScript.dialogue.gateDialogue2);
 
         gate1.addEventListener("click", () => {
-            mainScript.showDialogue(mainScript.dialogue.gate2b)
+            mainScript.showDialogue(null, mainScript.dialogue.gate2b);
         });
     }
 });

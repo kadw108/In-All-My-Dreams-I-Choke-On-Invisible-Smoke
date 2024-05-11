@@ -22,6 +22,8 @@ $(function () {
 $(function () {
     mainScript.addArrow("up", "garden3_centerupup");
     mainScript.addArrow("down", "garden3_center");
+
+    mainScript.addNpc("assets/d_niveah.gif", 16, 10, 80, "Niveah", mainScript.dialogue.miscDialogue13);
 });
 %>
 
@@ -37,6 +39,8 @@ $(function () {
     mainScript.addArrow("up", "garden3_centerupupup");
     mainScript.addArrow("down", "garden3_centerup");
     mainScript.addArrow("right", "garden3_eden0");
+
+    mainScript.addNpc("assets/d_yiyun.gif", 20, 22, 60, "Yiyun", mainScript.dialogue.miscDialogue16);
 });
 %>
 
@@ -58,12 +62,12 @@ $(function () {
 
     if (story.myInventory.checkHasItem("blood_left") && story.myInventory.checkHasItem("blood_right")) {
         gate1.addEventListener("click", () => {
-            mainScript.showDialogue(mainScript.dialogue.gate2c)
+            mainScript.showDialogue(null, mainScript.dialogue.gate2c);
         });
     }
     else {
         gate1.addEventListener("click", () => {
-            mainScript.showDialogue(mainScript.dialogue.gate2d)
+            mainScript.showDialogue(null, mainScript.dialogue.gate2d);
         });
     }
 });

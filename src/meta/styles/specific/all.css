@@ -22,12 +22,6 @@
     padding: 0px;
     overflow: visible;
 
-    border-image: url("assets/black1.gif");
-    border-color: #222;
-    border-image-slice: 8;
-    border-width: 7px;
-    border-image-repeat: repeat;
-
     z-index: 10;
 }
 div.cutscenePanel > img {
@@ -69,4 +63,14 @@ div.cutscenePanel > .closeButton {
 #iff-snippet > div.bigPanel {
     width: 97%;
     height: 97%;
+}
+
+div.bottomHalf,
+div.cutscenePanel,
+div#namePanel {
+    border-image: url("assets/black1.gif");
+    border-color: #222;
+    border-image-slice: 8;
+    border-width: 7px;
+    border-image-repeat: repeat;
 }
