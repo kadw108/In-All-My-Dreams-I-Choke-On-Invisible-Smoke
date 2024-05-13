@@ -1,3 +1,7 @@
+#passages {
+    animation: rotatehueverylight 2s infinite alternate;
+}
+
 #iff-snippet > * {
     position: absolute;
 }

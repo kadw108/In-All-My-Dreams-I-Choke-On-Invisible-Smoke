@@ -167,7 +167,8 @@ export const dialogue: dialogueObject = {
         },
     ],
 
-    miscDialogue2a: [ // CHARLES KINBOTE
+    miscDialogue2a: [
+        // CHARLES KINBOTE
         {
             text: "The more lucid and overwhelming one's belief in Heaven, the greater the temptation to get it over with, this business of life.",
         },
@@ -199,7 +200,8 @@ export const dialogue: dialogueObject = {
             ],
         },
     ],
-    miscDialogue2b: [ // CHARLES KINBOTE
+    miscDialogue2b: [
+        // CHARLES KINBOTE
         {
             text: "When the soul adores Him Who guides it through mortal life, when it distinguishes His sign at every turn of the trail, painted on the boulder and notched in the fir trunk, when every page in the book of one's personal fate bears His watermark, how can one doubt that He will also preserve us through all eternity?",
         },
@@ -250,7 +252,8 @@ export const dialogue: dialogueObject = {
             text: "There is no hope.",
         },
     ],
-    miscDialogue4: [ // RAY PRITCHARD
+    miscDialogue4: [
+        // RAY PRITCHARD
         {
             text: "Father, we thank you for the gift of marriage.",
         },
@@ -258,67 +261,70 @@ export const dialogue: dialogueObject = {
             text: "We acknowledge that your ways are perfect and that you make no mistakes. We gladly confess that without you we can do nothing. Help us to submit ourselves to you completely with no strings attached.",
         },
         {
-            text: "May we become a church of happy Christian homes where Jesus Christ can be seen in our closest relationships. We pray for those who are hurting and lonely that they might receive a fresh touch from your Spirit. Grant healing and hope to us as we pray."
+            text: "May we become a church of happy Christian homes where Jesus Christ can be seen in our closest relationships. We pray for those who are hurting and lonely that they might receive a fresh touch from your Spirit. Grant healing and hope to us as we pray.",
         },
         {
-            text: "...That is what you're thinking about? How strange of you..."
-        }
+            text: "...That is what you're thinking about? How strange of you...",
+        },
     ],
-    miscDialogue5: [ // GEOFF THOMAS
+    miscDialogue5: [
+        // GEOFF THOMAS (this is unused)
         {
-            text: "Adam and Eve were naked and unashamed. God blessed them with a mandate to multiply and have babies. The Bible says a wife's body belongs to her husband and a husband's body belongs to his wife, and Scripture commands them to give their bodies to each other regularly and satisfy each other's desires (1 Corinthians 7:3-5)."
-        }
+            text: "Adam and Eve were naked and unashamed. God blessed them with a mandate to multiply and have babies. The Bible says a wife's body belongs to her husband and a husband's body belongs to his wife, and Scripture commands them to give their bodies to each other regularly and satisfy each other's desires (1 Corinthians 7:3-5).",
+        },
     ],
-    miscDialogue6: [ // DAVID WILKERSON
-       {
-            text: "There's going to be a final war called the battle of Armageddon. There's going to be a lot of bloodshed. There's going to be lamentations and wailing."
-       },
-       {
-            text: "Not my blood, though. Surely I am exempt? Surely I am deserving?"
-       }
+    miscDialogue6: [
+        // DAVID WILKERSON
+        {
+            text: "There's going to be a final war called the battle of Armageddon. There's going to be a lot of bloodshed. There's going to be lamentations and wailing.",
+        },
+        {
+            text: "Not my blood, though. Surely I am exempt? Surely I am deserving?",
+        },
     ],
     miscDialogue7: [
         {
-            text: "You were born too late to explore the world. Everything is already known. We understand God and understand science and understand the planet and how we're destroying it. We understand technology and use it to kill people where it counts with AI-guided strike missiles and autonomous war drones. We understand everything."
+            text: "You were born too late to explore the world. Everything is already known. We understand God and understand science and understand the planet and how we're destroying it. We understand technology and use it to kill people where it counts with AI-guided strike missiles and autonomous war drones. We understand everything.",
         },
         {
-            text: "We have reached the apex of society and it will be this, forever. It will be this life with the suburban garages and the white siding and the abandoned vegetable gardens in the backyard. Picket fences. Perfectly trimmed lawn grass."
+            text: "We have reached the apex of society and it will be this, forever. It will be this life with the suburban garages and the white siding and the abandoned vegetable gardens in the backyard. Picket fences. Perfectly trimmed lawn grass.",
         },
         {
-            text: "There is no place left to discover. The entire planet has been mapped out. You can go nowhere. You are trapped here for the rest of your life. There is no escape."
+            text: "There is no place left to discover. The entire planet has been mapped out. You can go nowhere. You are trapped here for the rest of your life. There is no escape.",
         },
     ],
-    miscDialogue8: [ // KIT RIEMER
+    miscDialogue8: [
+        // KIT RIEMER
         {
-            text: "I'm in the early stages of thinking about killing myself."
-        }
+            text: "I'm in the early stages of thinking about killing myself.",
+        },
     ],
     miscDialogue9: [
         {
-            text: "I'm not meant for display. You should shove me in a box and leave me in a warehouse underground."
+            text: "I'm not meant for display. You should shove me in a box and leave me in a warehouse underground.",
         },
         {
-            text: "Lowest level."
+            text: "Lowest level.",
         },
         {
-            text: "Stop touching me...."
-        }
+            text: "Stop touching me....",
+        },
     ],
     miscDialogue11: [
         {
-            text: "In the beginning was the Image."
+            text: "In the beginning was the Image.",
         },
         {
-            text: "And it was still, perfect, frozen in a beautiful eternity."
+            text: "And it was still, perfect, frozen in a beautiful eternity.",
         },
         {
-            text: "And now it is gone forever."
-        }
+            text: "And now it is gone forever.",
+        },
     ],
     miscDialogue12: [
         {
             text: "The image is worth a thousand words. It captures something a thousand words cannot: a single moment, frozen, silent.",
-        }
+        },
     ],
     miscDialogue13: [
         {
@@ -328,34 +334,53 @@ export const dialogue: dialogueObject = {
             text: "And I asked myself: Why do I see it everywhere, in the sky, the ground, the bowing of the trees in a windstorm, the cyclic patterns of leaves through the air?",
         },
         {
-            text: "You saw the trees swaying in the wind. The sound inside your head is growing louder. It never stopped growing. It is the most beautiful pain you've known."
-        }
+            text: "You saw the trees swaying in the wind. The sound inside your head is growing louder. It never stopped growing. It is the most beautiful pain you've known.",
+        },
     ],
     miscDialogue14: [
         {
-            text: "God created humans and left them to their own devices, so they could destroy themselves."
+            text: "God created humans and left them to their own devices, so they could destroy themselves.",
         },
     ],
     miscDialogue15: [
         {
-            text: "They're all the crazy ones. We're the only sane people in a world we will never understand."
+            text: "They're all the crazy ones. We're the only sane people in a world we will never understand.",
         },
         {
-            text: "You get it, right?"
-        }
+            text: "You get it, right?",
+        },
     ],
     miscDialogue16: [
         {
-            text: "They said, 'Everything is transforming, becoming something else.'"
+            text: "They said, 'Everything is transforming, becoming something else.'",
         },
         {
-            text: "They said, 'You will have strange dreams of being touched.'"
+            text: "They said, 'You will have strange dreams of being touched.'",
         },
         {
-            text: "They said, 'You will want to be touched.'"
+            text: "They said, 'You will want to be touched.'",
         },
         {
-            text: "I asked, 'What if I don't want to be touched?'"
+            text: "I asked, 'What if I don't want to be touched?'",
+        },
+    ],
+    miscDialogue17: [
+        {
+            text: "The foundational elements that the world are built upon are... smoke, metal, plastic, meat... and a fifth thing... what is the fifth thing?",
+            playerOptions: [{ text: "What about the periodic table?", nextPassage: 1 }],
+        },
+        {
+            text: "Huh? What's that? I've never heard of it...",
+            playerOptions: [{ text: "That seems unscientific...", nextPassage: 2 }],
+        },
+        {
+            text: "Oh... I get it. We must not come from the same place. Maybe things work differently for you...",
+        },
+        {
+            text: "It's okay. You'll learn eventually...",
+        },
+        {
+            text: "There are no grades here. Nobody is going to quiz you and then be disappointed if you fail. Isn't that nice...?",
         },
     ],
 
@@ -779,16 +804,16 @@ export const dialogue: dialogueObject = {
 
     tower: [
         {
-            text: "Even from this distance, the tower feels like it is taller than it appears..."
+            text: "Even from this distance, the tower feels like it is taller than it appears...",
         },
         {
-            text: "As if it is bending space in impossible angles."
-        }
+            text: "As if it is bending space in impossible angles.",
+        },
     ],
 
     tower2: [
         {
-            text: "Distance distorts as I approach. The tower grows with every step."
-        }
-    ]
+            text: "Distance distorts as I approach. The tower grows with every step.",
+        },
+    ],
 };

@@ -21,6 +21,24 @@
         filter: hue-rotate(0);
     }
     100% {
-        filter: hue-rotate(360);
+        filter: hue-rotate(360deg);
+    }
+}
+
+@keyframes rotatehuelight {
+    0% {
+        filter: hue-rotate(-40deg);
+    }
+    100% {
+        filter: hue-rotate(40deg);
+    }
+}
+
+@keyframes rotatehueverylight {
+    0% {
+        filter: hue-rotate(-20deg);
+    }
+    100% {
+        filter: hue-rotate(20deg);
     }
 }
