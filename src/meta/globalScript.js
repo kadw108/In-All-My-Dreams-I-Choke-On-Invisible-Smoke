@@ -1,5 +1,6 @@
 $(function () {
     mainScript.addWrapperHtml();
+    mainScript.replaceName(snippet.tags);
     mainScript.addReplaceLink();
     mainScript.addMenuPanels();
 

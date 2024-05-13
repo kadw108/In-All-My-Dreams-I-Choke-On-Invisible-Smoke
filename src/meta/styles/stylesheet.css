@@ -26,7 +26,6 @@ GENERAL STYLE
 
     z-index: -1;
 
-    background-image: url("assets/background.png");
     background-color: #000000;
 }
 
@@ -54,9 +53,12 @@ GENERAL STYLE
     font-family: "MonoFont", monospace;
 
     position: relative;
+
+    border: 1px dotted #666666;
+    overflow: scroll;
 }
 
-#screenBg {
+/* #screenBg {
     width: 100%;
     height: 100%;
 
@@ -65,12 +67,10 @@ GENERAL STYLE
     background-position: center;
 
     border: 1px dotted #666666;
-    border-image: url(assets/white3.gif);
-    border-image-slice: 4;
 
     position: relative;
     z-index: 0;
-}
+} */
 
 #screenContents {
     width: 97%;
@@ -236,13 +236,13 @@ a:not([data-snippet]) {
     cursor: pointer;
 }
 a[data-snippet] {
-    color: #809fdd;
+    color: #80dd9f;
     text-decoration: underline;
     text-underline-offset: 3px;
 }
 a:hover {
     text-decoration: inherit;
-    color: #446699;
+    color: #449966;
 }
 .hiddenLink a {
     font-weight: inherit;
@@ -288,4 +288,5 @@ h3 {
     font-family: "Display1", "MonoFont", monospace;
     letter-spacing: 0.02em;
     text-transform: uppercase;
+    font-weight: normal;
 }

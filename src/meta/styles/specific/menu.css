@@ -1,0 +1,7 @@
+#passages {
+    overflow: hidden;
+    background-image: url(assets/thumbnail_ingame.gif);
+    background-size: cover;
+    background-position-y: bottom;
+    filter: contrast(1.3);
+}

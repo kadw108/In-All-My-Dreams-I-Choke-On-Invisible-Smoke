@@ -29,8 +29,6 @@ export function addWrapperHtml() {
                 <div id="bg" className="fullscreenBg"></div>
                 <div id="screenCover" className="fullscreenBg"></div>
                 <div id="passages">
-                    <div id="screenBg"></div>
-
                     <div id="screenContents" className="absoluteAlign">
                         {iffSnippet}
                     </div>

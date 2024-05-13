@@ -74,3 +74,19 @@ div#namePanel {
     border-width: 7px;
     border-image-repeat: repeat;
 }
+
+.corruptDataPlaceholder {
+    height: 14px;
+    width: 70px;
+}
+
+.bwImage {
+    position: absolute;
+    width: 24%;
+    z-index: 30;
+    border: 4px double white;
+    top: auto;
+    bottom: 1%;
+    left: auto;
+    right: 1%;
+}

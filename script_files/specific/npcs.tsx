@@ -56,7 +56,7 @@ export function showDialogue(name: string | null, dialogueList: Array<Dialogue>,
     const dialoguePanel = getDialoguePanel();
     const closeButton = clearAndAddCloseButton(dialoguePanel);
     closeButton.addEventListener("click", () => {
-        document.getElementById("namePanel").remove();
+        document.getElementById("namePanel")?.remove();
     })
 
     const dialogueText = document.createElement("p");
@@ -80,7 +80,7 @@ export function showDialogue(name: string | null, dialogueList: Array<Dialogue>,
             } else {
                 optionHtml.addEventListener("click", () => {
                     dialoguePanel.remove();
-                    document.getElementById("namePanel").remove();
+                    document.getElementById("namePanel")?.remove();
                 });
             }
             if (option.callback !== undefined) {
@@ -105,7 +105,7 @@ export function showDialogue(name: string | null, dialogueList: Array<Dialogue>,
             optionHtml = <a>⮕ End</a>;
             optionHtml.addEventListener("click", () => {
                 dialoguePanel.remove();
-                document.getElementById("namePanel").remove();
+                document.getElementById("namePanel")?.remove();
             });
         }
         dialoguePanel.append(optionHtml);
@@ -124,7 +124,7 @@ function createDialoguePanel(): HTMLElement {
     const dialoguePanel = <div id="dialoguePanel" className="absoluteAlign bottomHalf blackBg dialoguePanel"></div>;
     const closeButton = clearAndAddCloseButton(dialoguePanel);
     closeButton.addEventListener("click", () => {
-        document.getElementById("namePanel").remove();
+        document.getElementById("namePanel")?.remove();
     })
 
     const iffSnippet = document.getElementById("iff-snippet");

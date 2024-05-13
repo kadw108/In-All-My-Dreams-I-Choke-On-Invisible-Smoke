@@ -177,3 +177,46 @@ export function preload(imageList: Array<string>) {
         }
     });
 }
+
+export function replaceName(tags: Array<string>) {
+    document.querySelectorAll("span.myName").forEach((myName) => {
+        // @ts-expect-error (for story)
+        if (story.name === null) {
+            myName.innerHTML = '<img class="corruptDataPlaceholder" src="assets/white3.gif" alt="[DATA LOST]"/>';
+        } else {
+            // @ts-expect-error (for story)
+            myName.innerHTML = story.name;
+        }
+    });
+
+    const you = document.querySelector("img.you");
+    if (you !== null) {
+        // @ts-expect-error (for story)
+        if (story.gender_you === "m") {
+            (document.querySelector("img.you") as HTMLImageElement).src = "assets/9portrait2b.png.gif";
+        } else {
+            (document.querySelector("img.you") as HTMLImageElement).src = "assets/9portrait2a.png.gif";
+        }
+    }
+
+    if (tags.includes("meImage")) {
+        const meImage = <img src="assets/9portrait1b.png.gif" className="absoluteAlign bwImage"></img>;
+        document.getElementById("iff-snippet").append(meImage);
+    } else if (tags.includes("meImage2")) {
+        const meImage = <img src="assets/9portrait1b.png_glitch.gif" className="absoluteAlign bwImage"></img>;
+
+        const styleObj = { width: "12%", backgroundColor: "white", border: "4px double black", bottom: "38%", right: "0%" };
+        let youImage;
+        // @ts-expect-error (for story)
+        if (story.gender_you === "m") {
+            youImage = <img className="bwImage" src="assets/9portrait2b.png_glitch.gif" style={styleObj} alt="drawing" />;
+        } else {
+            youImage = <img className="bwImage" src="assets/9portrait2a.png_glitch.gif" style={styleObj} alt="drawing" />;
+        }
+
+        document.getElementById("iff-snippet").append(meImage, youImage);
+    } else if (tags.includes("meImage3")) {
+        const meImage = <img src="assets/9portrait1b.png_glitch.gif" className="absoluteAlign bwImage"></img>;
+        document.getElementById("iff-snippet").append(meImage);
+    }
+}

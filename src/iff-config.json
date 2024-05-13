@@ -4,7 +4,7 @@
         "author": {
             "name": "KADW"
         },
-        "version": "1.0.0"
+        "version": "1.1.0"
     },
     "scripts": {
         "story": [
@@ -26,10 +26,16 @@
             {
                 "rule": "dream",
                 "files": ["meta/styles/specific/animations.css", "meta/styles/specific/dream.css"]
+            },
+            {
+                "rule" : "menu",
+                "files": ["meta/styles/specific/menu.css"]
             }
         ]
     },
     "validation": {
-        "form-dup-name": "warn"
+        "form-dup-name": "warn",
+        "empty-heading": "off",
+        "element-required-attributes": "warn"
     }
 }

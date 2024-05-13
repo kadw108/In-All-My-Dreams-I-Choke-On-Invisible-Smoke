@@ -1,6 +1,132 @@
+<snippet name="choice">
+    <div style="text-align: center">
+        <p>I am</p>
+        <p><a id="m">a boy</a> | <a id="f">a girl</a> | <a id="x">neither</a></p>
+    </div>
+
+    <% 
+    $(function () {
+        const m = document.getElementById("m");
+        m.addEventListener("click", () => {
+            story.gender = "m";
+            story.gender_you = "f";
+            story.showSnippet("choicem");
+        });
+
+        const f = document.getElementById("f");
+        f.addEventListener("click", () => {
+            story.gender = "f";
+            story.gender_you = "m";
+            story.showSnippet("choicef");
+        });
+
+        const x = document.getElementById("x");
+        x.addEventListener("click", () => {
+            story.gender = "x";
+            if (Math.random() < 0.5) {
+                story.gender_you = "m";
+            }
+            else {
+                story.gender_you = "f";
+            }
+            story.showSnippet("choicex");
+        });
+
+        mainScript.preload(["assets/9portrait1.png.gif"]);
+    });
+    %>
+
+</snippet>
+
+<snippet name="choicem">
+    <div style="text-align: center">
+        <p>My name is</p>
+        <p><a id="simon">Simon</a> | <a id="benjamin">Benjamin</a> | <a id="jacob">Jacob</a></p>
+    </div>
+
+    <% 
+    $(function () {
+        const a = document.getElementById("simon");
+        a.addEventListener("click", () => {
+            story.name = "Simon";
+            story.showSnippet("intro");
+        });
+
+        const b = document.getElementById("benjamin");
+        b.addEventListener("click", () => {
+            story.name = "Benjamin";
+            story.showSnippet("intro");
+        });
+
+        const c = document.getElementById("jacob");
+        c.addEventListener("click", () => {
+            story.name = "Jacob";
+            story.showSnippet("intro");
+        });
+    });
+    %>
+
+</snippet>
+
+<snippet name="choicef">
+    <div style="text-align: center">
+        <p>My name is</p>
+        <p><a id="leah">Leah</a> | <a id="julia">Julia</a> | <a id="ruth">Ruth</a></p>
+    </div>
+
+    <% 
+    $(function () {
+        const a = document.getElementById("leah");
+        a.addEventListener("click", () => {
+            story.name = "Leah";
+            story.showSnippet("intro");
+        });
+
+        const b = document.getElementById("julia");
+        b.addEventListener("click", () => {
+            story.name = "Julia";
+            story.showSnippet("intro");
+        });
+
+        const c = document.getElementById("ruth");
+        c.addEventListener("click", () => {
+            story.name = "Ruth";
+            story.showSnippet("intro");
+        });
+    });
+    %>
+
+</snippet>
+
+<snippet name="choicex">
+    <div style="text-align: center">
+        <p>My name is</p> <img class="corruptDataPlaceholder" src="assets/white3.gif" alt="[DATA LOST]"/>
+
+        <br/><br/><br/>
+
+        <p>...</p>
+
+        <p>I haven't decided what my real name is.</p>
+
+        <p>[[⮕ Next|choicex2]]</p>
+    </div>
+</snippet>
+
+<snippet name="choicex2">
+    <div style="text-align: center">
+        <p>No one knows.</p>
+
+        <p>[[⮕ Next|intro]]</p>
+    </div>
+</snippet>
+
 <snippet name="intro">
     <div style="text-align: center">
-        <!-- <p>[[That spring my head overflowed with visions, and I dreamed of another world.|drawing1]]</p> -->
-        <p>[[That spring my head overflowed with visions, and I dreamed of another world.|dreamtransition3]]</p>
+
+        <h3><span class="myName"></span>:</h3>
+
+        <p>[[That spring my head overflowed with visions, and I dreamed of another world.|drawing1]]</p>
+
+        <!-- drawing1 -->
     </div>
 </snippet>

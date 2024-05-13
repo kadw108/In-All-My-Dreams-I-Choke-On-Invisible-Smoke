@@ -261,7 +261,7 @@ export const dialogue: dialogueObject = {
             text: "May we become a church of happy Christian homes where Jesus Christ can be seen in our closest relationships. We pray for those who are hurting and lonely that they might receive a fresh touch from your Spirit. Grant healing and hope to us as we pray."
         },
         {
-            text: "...That's what you say, isn't it?"
+            text: "...That is what you're thinking about? How strange of you..."
         }
     ],
     miscDialogue5: [ // GEOFF THOMAS
@@ -325,10 +325,10 @@ export const dialogue: dialogueObject = {
             text: "And I asked myself: What is this place?",
         },
         {
-            text: "And I asked myself: Why do I see it everywhere, in the sky, the ground, the bowing of the trees in this windstorm, the cyclic patterns of the leaves through the air?",
+            text: "And I asked myself: Why do I see it everywhere, in the sky, the ground, the bowing of the trees in a windstorm, the cyclic patterns of leaves through the air?",
         },
         {
-            text: "You saw the leaves of the trees swaying in the wind. The sound inside your head is growing louder. It never stopped growing. It is the most beautiful pain you've known."
+            text: "You saw the trees swaying in the wind. The sound inside your head is growing louder. It never stopped growing. It is the most beautiful pain you've known."
         }
     ],
     miscDialogue14: [
@@ -660,7 +660,7 @@ export const dialogue: dialogueObject = {
             text: "It is beautiful...",
         },
         {
-            text: "And it hurts.",
+            text: "It hurts.",
             playerOptions: [
                 {
                     text: "WAKE UP",
@@ -776,4 +776,19 @@ export const dialogue: dialogueObject = {
             ],
         },
     ],
+
+    tower: [
+        {
+            text: "Even from this distance, the tower feels like it is taller than it appears..."
+        },
+        {
+            text: "As if it is bending space in impossible angles."
+        }
+    ],
+
+    tower2: [
+        {
+            text: "Distance distorts as I approach. The tower grows with every step."
+        }
+    ]
 };
