@@ -25,13 +25,13 @@ export function addWrapperHtml() {
         iffSnippet.remove();
 
         const contents = (
-            <div id="contents">
+            <div id="contents" className="styled-scrollbars">
                 <div id="bg" className="fullscreenBg"></div>
-                <div id="screenCover" className="fullscreenBg"></div>
                 <div id="passages">
                     <div id="screenContents" className="absoluteAlign">
                         {iffSnippet}
                     </div>
+                    <div id="screenCover" className="fullscreenBg"></div>
                 </div>
             </div>
         );

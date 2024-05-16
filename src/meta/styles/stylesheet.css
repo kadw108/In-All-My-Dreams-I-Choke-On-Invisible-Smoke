@@ -9,10 +9,31 @@ GENERAL STYLE
     --color2: #fff;
     --shadow: #ddd;
 
+    --scrollbar-foreground: #666;
+    --scrollbar-background: #222;
+
     --screenheight: 675px;
     --screenwidth: 765px;
     --screenheightbig: 700px;
     --screenwidthbig: 800px;
+}
+
+body {
+    /* Foreground, Background */
+    scrollbar-color: var(--scrollbar-foreground) var(--scrollbar-background);
+    overflow: hidden;
+}
+.styled-scrollbars::-webkit-scrollbar {
+    width: 10px; /* Mostly for vertical scrollbars */
+    height: 10px; /* Mostly for horizontal scrollbars */
+}
+.styled-scrollbars::-webkit-scrollbar-thumb {
+    /* Foreground */
+    background: var(--scrollbar-background);
+}
+.styled-scrollbars::-webkit-scrollbar-track {
+    /* Background */
+    background: var(--scrollbar-foreground);
 }
 
 /* Background */
@@ -55,7 +76,7 @@ GENERAL STYLE
     position: relative;
 
     border: 1px dotted #666666;
-    overflow: scroll;
+    overflow: auto;
 }
 
 /* #screenBg {
@@ -98,7 +119,7 @@ div.bothHalves {
 
     padding: 5px;
     padding-bottom: 0px;
-    overflow: scroll;
+    overflow: auto;
 }
 div.bottomHalf {
     height: 150px;
@@ -113,7 +134,7 @@ CUSTOM STYLES
 */
 
 .menuPanel {
-    overflow: scroll;
+    overflow: auto;
     padding: 3px 7px 3px 7px;
     margin: 5px;
 
