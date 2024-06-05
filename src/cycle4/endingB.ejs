@@ -10,7 +10,7 @@
 <snippet tags="earth earthMusicB meImage2" name="endingB1">
     <div class="absoluteAlign bothHalves gameBg" style="background-image: url('assets/earth_classroom4.gif'); background-size: cover"></div>
     <div class="absoluteAlign blackBg textPanel">
-        <p>Someone knocked.</p>
+        <p>You knocked.</p>
 
         <p>[[⮕ Next|endingB2]]</p>
     </div>
@@ -173,9 +173,9 @@
     <div class="absoluteAlign bothHalves gameBg" style="background-image: url('assets/earth_classroom4.gif'); background-size: cover"></div>
     <div class="absoluteAlign blackBg textPanel">
         <p>Your lips touched mine.</p>
-        
+
         <p>Your breath was hot and wet against my face. My glasses knocked against yours.</p>
-        
+
         <p>It felt like nothing.</p>
 
         <p>[[⮕ Next|endingB19.5]]</p>
@@ -196,6 +196,30 @@
     <div class="absoluteAlign blackBg textPanel">
         <p>I felt vaguely disgusted with myself.</p>
 
+        <p id="branch1">[[⮕ Next|endingB21]]</p>
+        <p id="branch2">[[⮕ Next|endingB20.5]]</p>
+    </div>
+
+    <% 
+    $(function () {
+        if (story.gender === "x") {
+            document.getElementById("branch1").style.setProperty('display', 'none');
+        }
+        else {
+            document.getElementById("branch2").style.setProperty('display', 'none');
+        }
+    });
+    %>
+
+</snippet>
+
+<snippet tags="earth earthMusicB meImage2" name="endingB20.5">
+    <div class="absoluteAlign bothHalves gameBg" style="background-image: url('assets/earth_classroom4.gif'); background-size: cover"></div>
+    <div class="absoluteAlign blackBg textPanel">
+        <p>You never understood who I really was, but you were still pathetic enough to fall in love with someone who never existed.</p>
+
+        <p>I should have said no.</p>
+
         <p>[[⮕ Next|endingB21]]</p>
     </div>
 </snippet>
@@ -203,7 +227,16 @@
 <snippet tags="earth earthMusicB meImage2" name="endingB21">
     <div class="absoluteAlign bothHalves gameBg" style="background-image: url('assets/earth_classroom4.gif'); background-size: cover"></div>
     <div class="absoluteAlign blackBg textPanel">
-        <p>Whatever reaction you'd been hoping for, you clearly hadn't found it. I saw your expression crumple. I knew, then, that we would never talk to each other again.</p>
+        <p>Whatever reaction you'd been hoping for, you clearly hadn't found it. I saw your expression crumple.</p>
+
+        <p>[[⮕ Next|endingB21.5]]</p>
+    </div>
+</snippet>
+
+<snippet tags="earth earthMusicB meImage2" name="endingB21.5">
+    <div class="absoluteAlign bothHalves gameBg" style="background-image: url('assets/earth_classroom4.gif'); background-size: cover"></div>
+    <div class="absoluteAlign blackBg textPanel">
+        <p>I knew, then, that we would never talk to each other again.</p>
 
         <p>[[⮕ Next|endingB22]]</p>
     </div>
@@ -212,7 +245,7 @@
 <snippet tags="earth earthMusicB meImage2" name="endingB22">
     <div class="absoluteAlign bothHalves gameBg" style="background-image: url('assets/earth_classroom4.gif'); background-size: cover"></div>
     <div class="absoluteAlign blackBg textPanel">
-        <p>"Lunch is ending. I have to go," I said.</p>
+        <p>"Lunch is ending. Let's go," I said.</p>
 
         <p>[[⮕ Next|finalB0]]</p>
     </div>

@@ -37,7 +37,11 @@
 <snippet tags="endB" name="finalB4">
     <div class="absoluteAlign bothHalves gameBg" style="background-image: url('assets/earth_cubicle.gif'); background-size: cover"></div>
     <div class="absoluteAlign blackBg textPanel bigPanel">
-        <p>I work in an office with many cubicles. There aren't many windows here. Sometimes I can barely see the sun.</p>
+        <p>I work in an office with many cubicles. There are only a few windows here. Sometimes I can barely see the sun.</p>
+
+        <p>It's not a social job.</p>
+
+        <p>Most days I don't talk to people at all.</p>
 
         <p>[[⮕ Next|finalB5]]</p>
     </div>
@@ -48,7 +52,39 @@
     <div class="absoluteAlign blackBg textPanel bigPanel">
         <p>I live alone, in my own apartment.</p>
 
-        <p>[[⮕ Next|finalB6]]</p>
+        <p id="branch1">[[⮕ Next|finalB6]]</p>
+        <p id="branch2">[[⮕ Next|finalB_extra1]]</p>
+    </div>
+
+    <% 
+    $(function () {
+        if (story.gender === "x") {
+            document.getElementById("branch1").style.setProperty('display', 'none');
+        }
+        else {
+            document.getElementById("branch2").style.setProperty('display', 'none');
+        }
+    });
+    %>
+</snippet>
+
+<snippet tags="endB" name="finalB_extra1">
+    <div class="absoluteAlign bothHalves gameBg" style="background-image: url('assets/earth_cubicle.gif'); background-size: cover"></div>
+    <div class="absoluteAlign blackBg textPanel bigPanel">
+        <p>I've decided on a name.</p>
+
+        <p>Nobody knows.</p>
+
+        <p>[[⮕ Next|finalB_extra2]]</p>
+    </div>
+</snippet>
+
+<snippet tags="endB" name="finalB_extra2">
+    <div class="absoluteAlign bothHalves gameBg" style="background-image: url('assets/earth_cubicle.gif'); background-size: cover"></div>
+    <div class="absoluteAlign blackBg textPanel bigPanel">
+        <p>I don't tell them. It's not worth it.</p>
+
+        <p>[[⮕ Next|finalB6.6]]</p>
     </div>
 </snippet>
 
@@ -64,7 +100,18 @@
 <snippet tags="endB" name="finalB6.5">
     <div class="absoluteAlign bothHalves gameBg" style="background-image: url('assets/earth_cubicle.gif'); background-size: cover"></div>
     <div class="absoluteAlign blackBg textPanel bigPanel">
-        <p>I've never kissed anyone else. I don't intend to.</p>
+        <p>I've never kissed anyone else.</p>
+
+        <p>[[⮕ Next|finalB6.6]]</p>
+    </div>
+</snippet>
+
+<snippet tags="endB" name="finalB6.6">
+    <div class="absoluteAlign bothHalves gameBg" style="background-image: url('assets/earth_cubicle.gif'); background-size: cover"></div>
+    <div class="absoluteAlign blackBg textPanel bigPanel">
+        <p>I minimize all interactions with other people.</p>
+
+        <p>It's not worth it.</p>
 
         <p>[[⮕ Next|finalB7]]</p>
     </div>
@@ -84,13 +131,6 @@
     <div class="absoluteAlign blackBg textPanel bigPanel">
         <p>But they have disappeared.</p>
 
-        <p>[[⮕ Next|finalB9]]</p>
-    </div>
-</snippet>
-
-<snippet tags="endB" name="finalB9">
-    <div class="absoluteAlign bothHalves gameBg" style="background-image: url('assets/earth_cubicle.gif'); background-size: cover"></div>
-    <div class="absoluteAlign blackBg textPanel bigPanel">
         <p>As all things will.</p>
 
         <p>[[⮕ Next|finalB10]]</p>
