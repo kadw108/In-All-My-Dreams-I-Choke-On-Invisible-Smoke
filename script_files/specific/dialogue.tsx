@@ -284,13 +284,13 @@ export const dialogue: dialogueObject = {
     ],
     miscDialogue7: [
         {
-            text: "You were born too late to explore the world. Everything is already known. We understand God and understand science and understand the planet and how we're destroying it. We understand technology and use it to kill people where it counts with AI-guided strike missiles and autonomous war drones. We understand everything.",
+            text: "You were born too late to explore the world. Everything is already known. We understand God and understand science and understand the planet and how we're destroying it. We understand technology and use it to kill people where it counts with drones and guns and bombs. We understand everything.",
         },
         {
-            text: "We have reached the apex of society and it will be this, forever. It will be this life with the suburban garages and the white siding and the abandoned vegetable gardens in the backyard. Picket fences. Perfectly trimmed lawn grass.",
+            text: "We have reached the apex of society. It will be this life with the suburban garages and white siding, forever.",
         },
         {
-            text: "There is no place left to discover. The entire planet has been mapped out. You can go nowhere. You are trapped here for the rest of your life. There is no escape.",
+            text: "There is no place left to discover. The entire planet has been mapped out. There is no escape.",
         },
     ],
     miscDialogue8: [
@@ -334,7 +334,7 @@ export const dialogue: dialogueObject = {
             text: "And I asked myself: Why do I see it everywhere, in the sky, the ground, the bowing of the trees in a windstorm, the cyclic patterns of leaves through the air?",
         },
         {
-            text: "You saw the trees swaying in the wind. The sound inside your head is growing louder. It never stopped growing. It is the most beautiful pain you've known.",
+            text: "You saw the trees swaying in the wind. The sound inside your head is growing louder. It never stops growing. It is the most beautiful pain you've known.",
         },
     ],
     miscDialogue14: [
