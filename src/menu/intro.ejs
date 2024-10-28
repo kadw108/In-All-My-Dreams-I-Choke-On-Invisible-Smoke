@@ -1,43 +1,3 @@
-<snippet name="choice">
-    <div style="text-align: center">
-        <p>I am</p>
-        <p><a id="m">a boy</a> | <a id="f">a girl</a> | <a id="x">neither</a></p>
-    </div>
-
-    <% 
-    $(function () {
-        const m = document.getElementById("m");
-        m.addEventListener("click", () => {
-            story.gender = "m";
-            story.gender_you = "f";
-            story.showSnippet("choicem");
-        });
-
-        const f = document.getElementById("f");
-        f.addEventListener("click", () => {
-            story.gender = "f";
-            story.gender_you = "m";
-            story.showSnippet("choicef");
-        });
-
-        const x = document.getElementById("x");
-        x.addEventListener("click", () => {
-            story.gender = "x";
-            if (Math.random() < 0.5) {
-                story.gender_you = "m";
-            }
-            else {
-                story.gender_you = "f";
-            }
-            story.showSnippet("choicex");
-        });
-
-        mainScript.preload(["assets/9portrait1b.png.gif"]);
-    });
-    %>
-
-</snippet>
-
 <snippet name="choicem">
     <div style="text-align: center">
         <p>My name is</p>
@@ -46,6 +6,8 @@
 
     <% 
     $(function () {
+        mainScript.preload(["assets/9portrait1b.png.gif"]);
+
         const a = document.getElementById("simon");
         a.addEventListener("click", () => {
             story.name = "Simon";

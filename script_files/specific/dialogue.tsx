@@ -785,10 +785,7 @@ export const dialogue: dialogueObject = {
 
     prism: [
         {
-            text: "Hey...",
-        },
-        {
-            text: "You know as well as I do where you belong.",
+            text: "You know where you belong.",
             playerOptions: [
                 {
                     text: "I know.",

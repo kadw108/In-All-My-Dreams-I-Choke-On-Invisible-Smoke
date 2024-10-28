@@ -12,9 +12,10 @@
     <div style="text-align: center; position: absolute; top: 65%; left: 5%; background-color: rgba(0, 0, 0, 0.6)">
         <h3>In All My Dreams I Choke On Invisible Smoke</h3>
 
-        <p>by KADW (<small>v1.2.2</small>)</p>
+        <p>by KADW (<small>v1.2.3</small>)</p>
 
-        <p>[[Start|choice]] | [[About|about]] | [[Credits|imageCredits]]</p>
+        <p id="choicem" class="hidden">[[Start|choicem]] | [[About|about]] | [[Credits|imageCredits]]</p>
+        <p id="choicef" class="hidden">[[Start|choicef]] | [[About|about]] | [[Credits|imageCredits]]</p>
     </div>
 
     <% 
@@ -26,8 +27,17 @@
 
         story.connection = 0;
 
-        story.gender = "x";
-        story.gender_you = null;
+        const roll = Math.floor(Math.random() * 2);
+        if (roll == 0) {
+            story.gender = "m";
+            story.gender_you = "f";
+            document.getElementById("choicem").classList.remove("hidden");
+        }
+        else {
+            story.gender = "f";
+            story.gender_you = "m";
+            document.getElementById("choicef").classList.remove("hidden");
+        }
         story.name = null;
     });
     %>
